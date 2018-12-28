@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Torenzo]">
+  <test thread-count="5" name="Default test(failed)">
+    <classes>
+      <class name="com.torenzosite.qa.testcases.ContactUsPageTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="verifyContactPage"/>
+          <include name="verifyHomePageTitle"/>
+          <include name="tearDown"/>
+          <include name="fillFormToConatctUs"/>
+        </methods>
+      </class> <!-- com.torenzosite.qa.testcases.ContactUsPageTest -->
+    </classes>
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Torenzo] -->

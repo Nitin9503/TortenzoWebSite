@@ -1,0 +1,1841 @@
+<html>
+<head>
+<title>TestNG:  TorenzoTest</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>TorenzoTest</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>18/2/11</td>
+</tr><tr>
+<td>Started on:</td><td>Tue Dec 11 15:38:06 IST 2018</td>
+</tr>
+<tr><td>Total time:</td><td>1648 seconds (1648163 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED CONFIGURATIONS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.torenzosite.qa.testcases.FeaturePageTest.setUp()'><b>setUp</b><br>Test class: com.torenzosite.qa.testcases.FeaturePageTest<br/>
+<a href="#Output-865744496" onClick='toggleBox("Output-865744496", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-865744496" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-865744496">
+Completed executing following method : FeaturePageTest.setUp<br/>
+</div>
+</td>
+<td><div><pre>org.openqa.selenium.WebDriverException: Timed out waiting 45 seconds for Firefox to start.
+Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
+System info: host: &apos;DESKTOP-A3DICO7&apos;, ip: &apos;169.254.38.26&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_131&apos;
+Driver info: driver.version: FirefoxDriver
+	at org.openqa.selenium.firefox.XpiDriverService.waitUntilAvailable(XpiDriverService.java:133)
+	at org.openqa.selenium.firefox.XpiDriverService.start(XpiDriverService.java:118)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:79)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:212)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:130)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:125)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:103)
+	at com.torenzosite.qa.base.TestBase.initialization(TestBase.java:51)
+	at com.torenzosite.qa.testcases.FeaturePageTest.setUp(FeaturePageTest.java:45)
+Caused by: org.openqa.selenium.net.UrlChecker$TimeoutException: Timed out waiting for [http://localhost:41309/hub/status] to be available after 45815 ms
+	at org.openqa.selenium.net.UrlChecker.waitUntilAvailable(UrlChecker.java:100)
+	at org.openqa.selenium.firefox.XpiDriverService.waitUntilAvailable(XpiDriverService.java:131)
+	... 37 more
+Caused by: java.util.concurrent.TimeoutException
+	at java.util.concurrent.FutureTask.get(Unknown Source)
+	at com.google.common.util.concurrent.SimpleTimeLimiter.callWithTimeout(SimpleTimeLimiter.java:156)
+	at org.openqa.selenium.net.UrlChecker.waitUntilAvailable(UrlChecker.java:75)
+	... 38 more
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace865744496", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace865744496'><pre>org.openqa.selenium.WebDriverException: Timed out waiting 45 seconds for Firefox to start.
+Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
+System info: host: &apos;DESKTOP-A3DICO7&apos;, ip: &apos;169.254.38.26&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_131&apos;
+Driver info: driver.version: FirefoxDriver
+	at org.openqa.selenium.firefox.XpiDriverService.waitUntilAvailable(XpiDriverService.java:133)
+	at org.openqa.selenium.firefox.XpiDriverService.start(XpiDriverService.java:118)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:79)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:212)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:130)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:125)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:103)
+	at com.torenzosite.qa.base.TestBase.initialization(TestBase.java:51)
+	at com.torenzosite.qa.testcases.FeaturePageTest.setUp(FeaturePageTest.java:45)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:455)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:520)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.net.UrlChecker$TimeoutException: Timed out waiting for [http://localhost:41309/hub/status] to be available after 45815 ms
+	at org.openqa.selenium.net.UrlChecker.waitUntilAvailable(UrlChecker.java:100)
+	at org.openqa.selenium.firefox.XpiDriverService.waitUntilAvailable(XpiDriverService.java:131)
+	... 37 more
+Caused by: java.util.concurrent.TimeoutException
+	at java.util.concurrent.FutureTask.get(Unknown Source)
+	at com.google.common.util.concurrent.SimpleTimeLimiter.callWithTimeout(SimpleTimeLimiter.java:156)
+	at org.openqa.selenium.net.UrlChecker.waitUntilAvailable(UrlChecker.java:75)
+	... 38 more
+</pre></div></td>
+<td>60</td>
+<td>com.torenzosite.qa.testcases.FeaturePageTest@3f49dace</td></tr>
+<tr>
+<td title='com.torenzosite.qa.testcases.LeaveUsPageTest.setUp()'><b>setUp</b><br>Test class: com.torenzosite.qa.testcases.LeaveUsPageTest<br/>
+<a href="#Output-1811975204" onClick='toggleBox("Output-1811975204", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1811975204" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1811975204">
+Completed executing following method : LeaveUsPageTest.setUp<br/>
+</div>
+</td>
+<td><div><pre>org.openqa.selenium.WebDriverException: Timed out waiting 45 seconds for Firefox to start.
+Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
+System info: host: &apos;DESKTOP-A3DICO7&apos;, ip: &apos;169.254.38.26&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_131&apos;
+Driver info: driver.version: FirefoxDriver
+	at org.openqa.selenium.firefox.XpiDriverService.waitUntilAvailable(XpiDriverService.java:133)
+	at org.openqa.selenium.firefox.XpiDriverService.start(XpiDriverService.java:118)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:79)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:212)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:130)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:125)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:103)
+	at com.torenzosite.qa.base.TestBase.initialization(TestBase.java:51)
+	at com.torenzosite.qa.testcases.LeaveUsPageTest.setUp(LeaveUsPageTest.java:41)
+Caused by: org.openqa.selenium.net.UrlChecker$TimeoutException: Timed out waiting for [http://localhost:21109/hub/status] to be available after 45001 ms
+	at org.openqa.selenium.net.UrlChecker.waitUntilAvailable(UrlChecker.java:100)
+	at org.openqa.selenium.firefox.XpiDriverService.waitUntilAvailable(XpiDriverService.java:131)
+	... 37 more
+Caused by: java.util.concurrent.TimeoutException
+	at java.util.concurrent.FutureTask.get(Unknown Source)
+	at com.google.common.util.concurrent.SimpleTimeLimiter.callWithTimeout(SimpleTimeLimiter.java:156)
+	at org.openqa.selenium.net.UrlChecker.waitUntilAvailable(UrlChecker.java:75)
+	... 38 more
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1811975204", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1811975204'><pre>org.openqa.selenium.WebDriverException: Timed out waiting 45 seconds for Firefox to start.
+Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
+System info: host: &apos;DESKTOP-A3DICO7&apos;, ip: &apos;169.254.38.26&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_131&apos;
+Driver info: driver.version: FirefoxDriver
+	at org.openqa.selenium.firefox.XpiDriverService.waitUntilAvailable(XpiDriverService.java:133)
+	at org.openqa.selenium.firefox.XpiDriverService.start(XpiDriverService.java:118)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:79)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:212)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:130)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:125)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:103)
+	at com.torenzosite.qa.base.TestBase.initialization(TestBase.java:51)
+	at com.torenzosite.qa.testcases.LeaveUsPageTest.setUp(LeaveUsPageTest.java:41)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:455)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:520)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.net.UrlChecker$TimeoutException: Timed out waiting for [http://localhost:21109/hub/status] to be available after 45001 ms
+	at org.openqa.selenium.net.UrlChecker.waitUntilAvailable(UrlChecker.java:100)
+	at org.openqa.selenium.firefox.XpiDriverService.waitUntilAvailable(XpiDriverService.java:131)
+	... 37 more
+Caused by: java.util.concurrent.TimeoutException
+	at java.util.concurrent.FutureTask.get(Unknown Source)
+	at com.google.common.util.concurrent.SimpleTimeLimiter.callWithTimeout(SimpleTimeLimiter.java:156)
+	at org.openqa.selenium.net.UrlChecker.waitUntilAvailable(UrlChecker.java:75)
+	... 38 more
+</pre></div></td>
+<td>59</td>
+<td>com.torenzosite.qa.testcases.LeaveUsPageTest@1e397ed7</td></tr>
+<tr>
+<td title='com.torenzosite.qa.testcases.HardwarePageTest.setUp()'><b>setUp</b><br>Test class: com.torenzosite.qa.testcases.HardwarePageTest<br/>
+<a href="#Output-2054332292" onClick='toggleBox("Output-2054332292", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-2054332292" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2054332292">
+Completed executing following method : HardwarePageTest.setUp<br/>
+</div>
+</td>
+<td><div><pre>org.openqa.selenium.WebDriverException: Timed out waiting 45 seconds for Firefox to start.
+Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
+System info: host: &apos;DESKTOP-A3DICO7&apos;, ip: &apos;169.254.38.26&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_131&apos;
+Driver info: driver.version: FirefoxDriver
+	at org.openqa.selenium.firefox.XpiDriverService.waitUntilAvailable(XpiDriverService.java:133)
+	at org.openqa.selenium.firefox.XpiDriverService.start(XpiDriverService.java:118)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:79)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:212)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:130)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:125)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:103)
+	at com.torenzosite.qa.base.TestBase.initialization(TestBase.java:51)
+	at com.torenzosite.qa.testcases.HardwarePageTest.setUp(HardwarePageTest.java:37)
+Caused by: org.openqa.selenium.net.UrlChecker$TimeoutException: Timed out waiting for [http://localhost:41011/hub/status] to be available after 45001 ms
+	at org.openqa.selenium.net.UrlChecker.waitUntilAvailable(UrlChecker.java:100)
+	at org.openqa.selenium.firefox.XpiDriverService.waitUntilAvailable(XpiDriverService.java:131)
+	... 37 more
+Caused by: java.util.concurrent.TimeoutException
+	at java.util.concurrent.FutureTask.get(Unknown Source)
+	at com.google.common.util.concurrent.SimpleTimeLimiter.callWithTimeout(SimpleTimeLimiter.java:156)
+	at org.openqa.selenium.net.UrlChecker.waitUntilAvailable(UrlChecker.java:75)
+	... 38 more
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2054332292", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2054332292'><pre>org.openqa.selenium.WebDriverException: Timed out waiting 45 seconds for Firefox to start.
+Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
+System info: host: &apos;DESKTOP-A3DICO7&apos;, ip: &apos;169.254.38.26&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_131&apos;
+Driver info: driver.version: FirefoxDriver
+	at org.openqa.selenium.firefox.XpiDriverService.waitUntilAvailable(XpiDriverService.java:133)
+	at org.openqa.selenium.firefox.XpiDriverService.start(XpiDriverService.java:118)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:79)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:212)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:130)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:125)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:103)
+	at com.torenzosite.qa.base.TestBase.initialization(TestBase.java:51)
+	at com.torenzosite.qa.testcases.HardwarePageTest.setUp(HardwarePageTest.java:37)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:455)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:520)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.net.UrlChecker$TimeoutException: Timed out waiting for [http://localhost:41011/hub/status] to be available after 45001 ms
+	at org.openqa.selenium.net.UrlChecker.waitUntilAvailable(UrlChecker.java:100)
+	at org.openqa.selenium.firefox.XpiDriverService.waitUntilAvailable(XpiDriverService.java:131)
+	... 37 more
+Caused by: java.util.concurrent.TimeoutException
+	at java.util.concurrent.FutureTask.get(Unknown Source)
+	at com.google.common.util.concurrent.SimpleTimeLimiter.callWithTimeout(SimpleTimeLimiter.java:156)
+	at org.openqa.selenium.net.UrlChecker.waitUntilAvailable(UrlChecker.java:75)
+	... 38 more
+</pre></div></td>
+<td>61</td>
+<td>com.torenzosite.qa.testcases.HardwarePageTest@490ab905</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED CONFIGURATIONS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.torenzosite.qa.testcases.FeaturePageTest.setUp()'><b>setUp</b><br>Test class: com.torenzosite.qa.testcases.FeaturePageTest</td>
+<td></td>
+<td>0</td>
+<td>com.torenzosite.qa.testcases.FeaturePageTest@3f49dace</td></tr>
+<tr>
+<td title='com.torenzosite.qa.testcases.FeaturePageTest.setUp()'><b>setUp</b><br>Test class: com.torenzosite.qa.testcases.FeaturePageTest</td>
+<td></td>
+<td>0</td>
+<td>com.torenzosite.qa.testcases.FeaturePageTest@3f49dace</td></tr>
+<tr>
+<td title='com.torenzosite.qa.testcases.FeaturePageTest.setUp()'><b>setUp</b><br>Test class: com.torenzosite.qa.testcases.FeaturePageTest</td>
+<td></td>
+<td>0</td>
+<td>com.torenzosite.qa.testcases.FeaturePageTest@3f49dace</td></tr>
+<tr>
+<td title='com.torenzosite.qa.testcases.FeaturePageTest.setUp()'><b>setUp</b><br>Test class: com.torenzosite.qa.testcases.FeaturePageTest</td>
+<td></td>
+<td>0</td>
+<td>com.torenzosite.qa.testcases.FeaturePageTest@3f49dace</td></tr>
+<tr>
+<td title='com.torenzosite.qa.testcases.FeaturePageTest.setUp()'><b>setUp</b><br>Test class: com.torenzosite.qa.testcases.FeaturePageTest</td>
+<td></td>
+<td>0</td>
+<td>com.torenzosite.qa.testcases.FeaturePageTest@3f49dace</td></tr>
+<tr>
+<td title='com.torenzosite.qa.testcases.LeaveUsPageTest.setUp()'><b>setUp</b><br>Test class: com.torenzosite.qa.testcases.LeaveUsPageTest</td>
+<td></td>
+<td>0</td>
+<td>com.torenzosite.qa.testcases.LeaveUsPageTest@1e397ed7</td></tr>
+<tr>
+<td title='com.torenzosite.qa.testcases.HardwarePageTest.setUp()'><b>setUp</b><br>Test class: com.torenzosite.qa.testcases.HardwarePageTest</td>
+<td></td>
+<td>0</td>
+<td>com.torenzosite.qa.testcases.HardwarePageTest@490ab905</td></tr>
+<tr>
+<td title='com.torenzosite.qa.testcases.HardwarePageTest.setUp()'><b>setUp</b><br>Test class: com.torenzosite.qa.testcases.HardwarePageTest</td>
+<td></td>
+<td>0</td>
+<td>com.torenzosite.qa.testcases.HardwarePageTest@490ab905</td></tr>
+<tr>
+<td title='com.torenzosite.qa.testcases.FeaturePageTest.tearDown()'><b>tearDown</b><br>Test class: com.torenzosite.qa.testcases.FeaturePageTest</td>
+<td></td>
+<td>0</td>
+<td>com.torenzosite.qa.testcases.FeaturePageTest@3f49dace</td></tr>
+<tr>
+<td title='com.torenzosite.qa.testcases.FeaturePageTest.tearDown()'><b>tearDown</b><br>Test class: com.torenzosite.qa.testcases.FeaturePageTest</td>
+<td></td>
+<td>0</td>
+<td>com.torenzosite.qa.testcases.FeaturePageTest@3f49dace</td></tr>
+<tr>
+<td title='com.torenzosite.qa.testcases.FeaturePageTest.tearDown()'><b>tearDown</b><br>Test class: com.torenzosite.qa.testcases.FeaturePageTest</td>
+<td></td>
+<td>0</td>
+<td>com.torenzosite.qa.testcases.FeaturePageTest@3f49dace</td></tr>
+<tr>
+<td title='com.torenzosite.qa.testcases.FeaturePageTest.tearDown()'><b>tearDown</b><br>Test class: com.torenzosite.qa.testcases.FeaturePageTest</td>
+<td></td>
+<td>0</td>
+<td>com.torenzosite.qa.testcases.FeaturePageTest@3f49dace</td></tr>
+<tr>
+<td title='com.torenzosite.qa.testcases.FeaturePageTest.tearDown()'><b>tearDown</b><br>Test class: com.torenzosite.qa.testcases.FeaturePageTest</td>
+<td></td>
+<td>0</td>
+<td>com.torenzosite.qa.testcases.FeaturePageTest@3f49dace</td></tr>
+<tr>
+<td title='com.torenzosite.qa.testcases.FeaturePageTest.tearDown()'><b>tearDown</b><br>Test class: com.torenzosite.qa.testcases.FeaturePageTest</td>
+<td></td>
+<td>0</td>
+<td>com.torenzosite.qa.testcases.FeaturePageTest@3f49dace</td></tr>
+<tr>
+<td title='com.torenzosite.qa.testcases.LeaveUsPageTest.tearDown()'><b>tearDown</b><br>Test class: com.torenzosite.qa.testcases.LeaveUsPageTest</td>
+<td></td>
+<td>0</td>
+<td>com.torenzosite.qa.testcases.LeaveUsPageTest@1e397ed7</td></tr>
+<tr>
+<td title='com.torenzosite.qa.testcases.LeaveUsPageTest.tearDown()'><b>tearDown</b><br>Test class: com.torenzosite.qa.testcases.LeaveUsPageTest</td>
+<td></td>
+<td>0</td>
+<td>com.torenzosite.qa.testcases.LeaveUsPageTest@1e397ed7</td></tr>
+<tr>
+<td title='com.torenzosite.qa.testcases.HardwarePageTest.tearDown()'><b>tearDown</b><br>Test class: com.torenzosite.qa.testcases.HardwarePageTest</td>
+<td></td>
+<td>0</td>
+<td>com.torenzosite.qa.testcases.HardwarePageTest@490ab905</td></tr>
+<tr>
+<td title='com.torenzosite.qa.testcases.HardwarePageTest.tearDown()'><b>tearDown</b><br>Test class: com.torenzosite.qa.testcases.HardwarePageTest</td>
+<td></td>
+<td>0</td>
+<td>com.torenzosite.qa.testcases.HardwarePageTest@490ab905</td></tr>
+<tr>
+<td title='com.torenzosite.qa.testcases.HardwarePageTest.tearDown()'><b>tearDown</b><br>Test class: com.torenzosite.qa.testcases.HardwarePageTest</td>
+<td></td>
+<td>0</td>
+<td>com.torenzosite.qa.testcases.HardwarePageTest@490ab905</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.torenzosite.qa.testcases.TryTorenzoForFreePageTest.clickOnTryTorenzoForFreeAndFillForm()'><b>clickOnTryTorenzoForFreeAndFillForm</b><br>Test class: com.torenzosite.qa.testcases.TryTorenzoForFreePageTest<br/>
+<a href="#Output-1399691256" onClick='toggleBox("Output-1399691256", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1399691256" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1399691256">
+About to begin executing following method : TryTorenzoForFreePageTest.clickOnTryTorenzoForFreeAndFillForm<br/>
+Completed executing following method : TryTorenzoForFreePageTest.clickOnTryTorenzoForFreeAndFillForm<br/>
+About to begin executing following method : TryTorenzoForFreePageTest.tearDown<br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: Validation message is missing upon clicking on Submit with empty data expected [This field is required.] but found [This field is required. Please enter the first and last name.]
+	at com.torenzosite.qa.testcases.TryTorenzoForFreePageTest.clickOnTryTorenzoForFreeAndFillForm(TryTorenzoForFreePageTest.java:120)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1399691256", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1399691256'><pre>java.lang.AssertionError: Validation message is missing upon clicking on Submit with empty data expected [This field is required.] but found [This field is required. Please enter the first and last name.]
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:453)
+	at com.torenzosite.qa.testcases.TryTorenzoForFreePageTest.clickOnTryTorenzoForFreeAndFillForm(TryTorenzoForFreePageTest.java:120)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>182</td>
+<td>com.torenzosite.qa.testcases.TryTorenzoForFreePageTest@27c20538</td></tr>
+<tr>
+<td title='com.torenzosite.qa.testcases.FeaturePageTest.verifyTryTorenzoForFree()'><b>verifyTryTorenzoForFree</b><br>Test class: com.torenzosite.qa.testcases.FeaturePageTest<br/>
+<a href="#Output-1973491942" onClick='toggleBox("Output-1973491942", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1973491942" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1973491942">
+About to begin executing following method : FeaturePageTest.verifyTryTorenzoForFree<br/>
+Completed executing following method : FeaturePageTest.verifyTryTorenzoForFree<br/>
+About to begin executing following method : FeaturePageTest.tearDown<br/>
+</div>
+</td>
+<td><div><pre>org.openqa.selenium.WebDriverException: Element &lt;a class=&quot;btn btn-primary btn-lg&quot; href=&quot;#&quot; data-toggle=&quot;modal&quot; data-target=&quot;#ID-NAME&quot;&gt;&lt;/a&gt; is not clickable at point (674.8333129882812, 27.133331298828125). Other element would receive the click: &lt;div class=&quot;modal-dialog&quot;&gt;&lt;/div&gt;
+Command duration or timeout: 0 milliseconds
+Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
+System info: host: &apos;DESKTOP-A3DICO7&apos;, ip: &apos;169.254.38.26&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_131&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptSslCerts: true, applicationCacheEnabled: true, browserName: firefox, cssSelectorsEnabled: true, databaseEnabled: true, handlesAlerts: true, javascriptEnabled: true, locationContextEnabled: true, nativeEvents: false, platform: WINDOWS, platformName: WINDOWS, rotatable: false, takesScreenshot: true, version: 47.0.2, webStorageEnabled: true}
+Session ID: 73d68c4a-5ebc-48e3-9023-5bada13ef50a
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:276)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:83)
+	at com.torenzosite.qa.testcases.FeaturePageTest.verifyTryTorenzoForFree(FeaturePageTest.java:95)
+... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1973491942", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1973491942'><pre>org.openqa.selenium.WebDriverException: Element &lt;a class=&quot;btn btn-primary btn-lg&quot; href=&quot;#&quot; data-toggle=&quot;modal&quot; data-target=&quot;#ID-NAME&quot;&gt;&lt;/a&gt; is not clickable at point (674.8333129882812, 27.133331298828125). Other element would receive the click: &lt;div class=&quot;modal-dialog&quot;&gt;&lt;/div&gt;
+Command duration or timeout: 0 milliseconds
+Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
+System info: host: &apos;DESKTOP-A3DICO7&apos;, ip: &apos;169.254.38.26&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_131&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptSslCerts: true, applicationCacheEnabled: true, browserName: firefox, cssSelectorsEnabled: true, databaseEnabled: true, handlesAlerts: true, javascriptEnabled: true, locationContextEnabled: true, nativeEvents: false, platform: WINDOWS, platformName: WINDOWS, rotatable: false, takesScreenshot: true, version: 47.0.2, webStorageEnabled: true}
+Session ID: 73d68c4a-5ebc-48e3-9023-5bada13ef50a
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:276)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:83)
+	at com.torenzosite.qa.testcases.FeaturePageTest.verifyTryTorenzoForFree(FeaturePageTest.java:95)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>16</td>
+<td>com.torenzosite.qa.testcases.FeaturePageTest@3f49dace</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.torenzosite.qa.testcases.FeaturePageTest.closeToForm()'><b>closeToForm</b><br>Test class: com.torenzosite.qa.testcases.FeaturePageTest<br/>
+<a href="#Output-1788048182" onClick='toggleBox("Output-1788048182", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1788048182" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1788048182">
+About to begin executing following method : FeaturePageTest.closeToForm<br/>
+Completed executing following method : FeaturePageTest.closeToForm<br/>
+About to begin executing following method : FeaturePageTest.tearDown<br/>
+</div>
+</td>
+<td></td>
+<td>11</td>
+<td>com.torenzosite.qa.testcases.FeaturePageTest@3f49dace</td></tr>
+<tr>
+<td title='com.torenzosite.qa.testcases.ContactUsPageTest.fillFormToConatctUs()'><b>fillFormToConatctUs</b><br>Test class: com.torenzosite.qa.testcases.ContactUsPageTest<br/>
+<a href="#Output-1803890702" onClick='toggleBox("Output-1803890702", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1803890702" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1803890702">
+About to begin executing following method : ContactUsPageTest.fillFormToConatctUs<br/>
+Completed executing following method : ContactUsPageTest.fillFormToConatctUs<br/>
+About to begin executing following method : ContactUsPageTest.tearDown<br/>
+</div>
+</td>
+<td></td>
+<td>25</td>
+<td>com.torenzosite.qa.testcases.ContactUsPageTest@5f2108b5</td></tr>
+<tr>
+<td title='com.torenzosite.qa.testcases.ContactUsPageTest.fillFormToConatctUsWithEmpty()'><b>fillFormToConatctUsWithEmpty</b><br>Test class: com.torenzosite.qa.testcases.ContactUsPageTest<br/>
+<a href="#Output-1223144402" onClick='toggleBox("Output-1223144402", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1223144402" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1223144402">
+About to begin executing following method : ContactUsPageTest.fillFormToConatctUsWithEmpty<br/>
+Completed executing following method : ContactUsPageTest.fillFormToConatctUsWithEmpty<br/>
+About to begin executing following method : ContactUsPageTest.tearDown<br/>
+</div>
+</td>
+<td></td>
+<td>34</td>
+<td>com.torenzosite.qa.testcases.ContactUsPageTest@5f2108b5</td></tr>
+<tr>
+<td title='com.torenzosite.qa.testcases.ContactUsPageTest.fillFormToConatctUsWithIncorrectEmail()'><b>fillFormToConatctUsWithIncorrectEmail</b><br>Test class: com.torenzosite.qa.testcases.ContactUsPageTest<br/>
+<a href="#Output-1715686600" onClick='toggleBox("Output-1715686600", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1715686600" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1715686600">
+About to begin executing following method : ContactUsPageTest.fillFormToConatctUsWithIncorrectEmail<br/>
+Completed executing following method : ContactUsPageTest.fillFormToConatctUsWithIncorrectEmail<br/>
+About to begin executing following method : ContactUsPageTest.tearDown<br/>
+</div>
+</td>
+<td></td>
+<td>300</td>
+<td>com.torenzosite.qa.testcases.ContactUsPageTest@5f2108b5</td></tr>
+<tr>
+<td title='com.torenzosite.qa.testcases.BrokenImageAndLinks.findBrokenLinkOnTorenzoMainPage()'><b>findBrokenLinkOnTorenzoMainPage</b><br>Test class: com.torenzosite.qa.testcases.BrokenImageAndLinks<br/>
+<a href="#Output-40170008" onClick='toggleBox("Output-40170008", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-40170008" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-40170008">
+About to begin executing following method : BrokenImageAndLinks.findBrokenLinkOnTorenzoMainPage<br/>
+Completed executing following method : BrokenImageAndLinks.findBrokenLinkOnTorenzoMainPage<br/>
+About to begin executing following method : BrokenImageAndLinks.tearDown<br/>
+</div>
+</td>
+<td></td>
+<td>23</td>
+<td>com.torenzosite.qa.testcases.BrokenImageAndLinks@5bcab519</td></tr>
+<tr>
+<td title='com.torenzosite.qa.testcases.ContactUsPageTest.verifyContactPage()'><b>verifyContactPage</b><br>Test class: com.torenzosite.qa.testcases.ContactUsPageTest<br/>
+<a href="#Output-762509150" onClick='toggleBox("Output-762509150", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-762509150" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-762509150">
+About to begin executing following method : ContactUsPageTest.verifyContactPage<br/>
+Completed executing following method : ContactUsPageTest.verifyContactPage<br/>
+About to begin executing following method : ContactUsPageTest.tearDown<br/>
+</div>
+</td>
+<td></td>
+<td>10</td>
+<td>com.torenzosite.qa.testcases.ContactUsPageTest@5f2108b5</td></tr>
+<tr>
+<td title='com.torenzosite.qa.testcases.HomePageTest.verifyEmailAddreeField()'><b>verifyEmailAddreeField</b><br>Test class: com.torenzosite.qa.testcases.HomePageTest<br/>
+<a href="#Output-1689924104" onClick='toggleBox("Output-1689924104", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1689924104" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1689924104">
+About to begin executing following method : HomePageTest.verifyEmailAddreeField<br/>
+Completed executing following method : HomePageTest.verifyEmailAddreeField<br/>
+About to begin executing following method : HomePageTest.tearDown<br/>
+</div>
+</td>
+<td></td>
+<td>7</td>
+<td>com.torenzosite.qa.testcases.HomePageTest@e45f292</td></tr>
+<tr>
+<td title='com.torenzosite.qa.testcases.FeaturePageTest.verifyFeaturesPageTitle()'><b>verifyFeaturesPageTitle</b><br>Test class: com.torenzosite.qa.testcases.FeaturePageTest<br/>
+<a href="#Output-1412612727" onClick='toggleBox("Output-1412612727", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1412612727" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1412612727">
+About to begin executing following method : FeaturePageTest.verifyFeaturesPageTitle<br/>
+Completed executing following method : FeaturePageTest.verifyFeaturesPageTitle<br/>
+About to begin executing following method : FeaturePageTest.tearDown<br/>
+</div>
+</td>
+<td></td>
+<td>9</td>
+<td>com.torenzosite.qa.testcases.FeaturePageTest@3f49dace</td></tr>
+<tr>
+<td title='com.torenzosite.qa.testcases.HomePageTest.verifyHomePageTitle()'><b>verifyHomePageTitle</b><br>Test class: com.torenzosite.qa.testcases.HomePageTest<br/>
+<a href="#Output-1963075870" onClick='toggleBox("Output-1963075870", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1963075870" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1963075870">
+About to begin executing following method : HomePageTest.verifyHomePageTitle<br/>
+Completed executing following method : HomePageTest.verifyHomePageTitle<br/>
+About to begin executing following method : HomePageTest.tearDown<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.torenzosite.qa.testcases.HomePageTest@e45f292</td></tr>
+<tr>
+<td title='com.torenzosite.qa.testcases.ContactUsPageTest.verifyHomePageTitle()'><b>verifyHomePageTitle</b><br>Test class: com.torenzosite.qa.testcases.ContactUsPageTest<br/>
+<a href="#Output-98351968" onClick='toggleBox("Output-98351968", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-98351968" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-98351968">
+About to begin executing following method : ContactUsPageTest.verifyHomePageTitle<br/>
+Completed executing following method : ContactUsPageTest.verifyHomePageTitle<br/>
+About to begin executing following method : ContactUsPageTest.tearDown<br/>
+</div>
+</td>
+<td></td>
+<td>18</td>
+<td>com.torenzosite.qa.testcases.ContactUsPageTest@5f2108b5</td></tr>
+<tr>
+<td title='com.torenzosite.qa.testcases.TorenzoPOSPageTest.verifyHomePageTitle()'><b>verifyHomePageTitle</b><br>Test class: com.torenzosite.qa.testcases.TorenzoPOSPageTest<br/>
+<a href="#Output-652481263" onClick='toggleBox("Output-652481263", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-652481263" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-652481263">
+About to begin executing following method : TorenzoPOSPageTest.verifyHomePageTitle<br/>
+Completed executing following method : TorenzoPOSPageTest.verifyHomePageTitle<br/>
+About to begin executing following method : TorenzoPOSPageTest.tearDown<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.torenzosite.qa.testcases.TorenzoPOSPageTest@31a5c39e</td></tr>
+<tr>
+<td title='com.torenzosite.qa.testcases.FeaturePageTest.verifyHomePageTitle()'><b>verifyHomePageTitle</b><br>Test class: com.torenzosite.qa.testcases.FeaturePageTest<br/>
+<a href="#Output-123629835" onClick='toggleBox("Output-123629835", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-123629835" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-123629835">
+About to begin executing following method : FeaturePageTest.verifyHomePageTitle<br/>
+Completed executing following method : FeaturePageTest.verifyHomePageTitle<br/>
+About to begin executing following method : FeaturePageTest.tearDown<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.torenzosite.qa.testcases.FeaturePageTest@3f49dace</td></tr>
+<tr>
+<td title='com.torenzosite.qa.testcases.PricingPageTest.verifyHomePageTitle()'><b>verifyHomePageTitle</b><br>Test class: com.torenzosite.qa.testcases.PricingPageTest<br/>
+<a href="#Output-1105958076" onClick='toggleBox("Output-1105958076", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1105958076" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1105958076">
+About to begin executing following method : PricingPageTest.verifyHomePageTitle<br/>
+Completed executing following method : PricingPageTest.verifyHomePageTitle<br/>
+About to begin executing following method : PricingPageTest.tearDown<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.torenzosite.qa.testcases.PricingPageTest@56ac3a89</td></tr>
+<tr>
+<td title='com.torenzosite.qa.testcases.TryTorenzoForFreePageTest.verifyHomePageTitle()'><b>verifyHomePageTitle</b><br>Test class: com.torenzosite.qa.testcases.TryTorenzoForFreePageTest<br/>
+<a href="#Output-654003462" onClick='toggleBox("Output-654003462", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-654003462" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-654003462">
+About to begin executing following method : TryTorenzoForFreePageTest.verifyHomePageTitle<br/>
+Completed executing following method : TryTorenzoForFreePageTest.verifyHomePageTitle<br/>
+About to begin executing following method : TryTorenzoForFreePageTest.tearDown<br/>
+</div>
+</td>
+<td></td>
+<td>2</td>
+<td>com.torenzosite.qa.testcases.TryTorenzoForFreePageTest@27c20538</td></tr>
+<tr>
+<td title='com.torenzosite.qa.testcases.PricingPageTest.verifyPricingPageTitle()'><b>verifyPricingPageTitle</b><br>Test class: com.torenzosite.qa.testcases.PricingPageTest<br/>
+<a href="#Output-430329518" onClick='toggleBox("Output-430329518", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-430329518" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-430329518">
+About to begin executing following method : PricingPageTest.verifyPricingPageTitle<br/>
+Completed executing following method : PricingPageTest.verifyPricingPageTitle<br/>
+About to begin executing following method : PricingPageTest.tearDown<br/>
+</div>
+</td>
+<td></td>
+<td>17</td>
+<td>com.torenzosite.qa.testcases.PricingPageTest@56ac3a89</td></tr>
+<tr>
+<td title='com.torenzosite.qa.testcases.TorenzoPOSPageTest.verifyTextFromTorenzoPOSPage()'><b>verifyTextFromTorenzoPOSPage</b><br>Test class: com.torenzosite.qa.testcases.TorenzoPOSPageTest<br/>
+<a href="#Output-232886115" onClick='toggleBox("Output-232886115", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-232886115" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-232886115">
+About to begin executing following method : TorenzoPOSPageTest.verifyTextFromTorenzoPOSPage<br/>
+Completed executing following method : TorenzoPOSPageTest.verifyTextFromTorenzoPOSPage<br/>
+About to begin executing following method : TorenzoPOSPageTest.tearDown<br/>
+</div>
+</td>
+<td></td>
+<td>4</td>
+<td>com.torenzosite.qa.testcases.TorenzoPOSPageTest@31a5c39e</td></tr>
+<tr>
+<td title='com.torenzosite.qa.testcases.HomePageTest.verifyWithEmptyEmailAddreeField()'><b>verifyWithEmptyEmailAddreeField</b><br>Test class: com.torenzosite.qa.testcases.HomePageTest<br/>
+<a href="#Output-1543518287" onClick='toggleBox("Output-1543518287", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1543518287" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1543518287">
+About to begin executing following method : HomePageTest.verifyWithEmptyEmailAddreeField<br/>
+Completed executing following method : HomePageTest.verifyWithEmptyEmailAddreeField<br/>
+About to begin executing following method : HomePageTest.tearDown<br/>
+</div>
+</td>
+<td></td>
+<td>23</td>
+<td>com.torenzosite.qa.testcases.HomePageTest@e45f292</td></tr>
+<tr>
+<td title='com.torenzosite.qa.testcases.HomePageTest.verifyWithInvalidEmailAddreeField()'><b>verifyWithInvalidEmailAddreeField</b><br>Test class: com.torenzosite.qa.testcases.HomePageTest<br/>
+<a href="#Output-1313960293" onClick='toggleBox("Output-1313960293", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1313960293" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1313960293">
+About to begin executing following method : HomePageTest.verifyWithInvalidEmailAddreeField<br/>
+Completed executing following method : HomePageTest.verifyWithInvalidEmailAddreeField<br/>
+About to begin executing following method : HomePageTest.tearDown<br/>
+</div>
+</td>
+<td></td>
+<td>23</td>
+<td>com.torenzosite.qa.testcases.HomePageTest@e45f292</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.torenzosite.qa.testcases.FeaturePageTest.fillFormFromFeaturePage()'><b>fillFormFromFeaturePage</b><br>Test class: com.torenzosite.qa.testcases.FeaturePageTest<br/>
+<a href="#Output-1323235180" onClick='toggleBox("Output-1323235180", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1323235180" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1323235180">
+(About@Test Method)Test Method resides in com.torenzosite.qa.testcases.FeaturePageTest<br/>
+Test Status: Skipped<br/>
+About to begin executing following method : FeaturePageTest.fillFormFromFeaturePage<br/>
+Completed executing following method : FeaturePageTest.fillFormFromFeaturePage<br/>
+</div>
+</td>
+<td><div><pre>org.openqa.selenium.WebDriverException: Timed out waiting 45 seconds for Firefox to start.
+Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
+System info: host: &apos;DESKTOP-A3DICO7&apos;, ip: &apos;169.254.38.26&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_131&apos;
+Driver info: driver.version: FirefoxDriver
+	at org.openqa.selenium.firefox.XpiDriverService.waitUntilAvailable(XpiDriverService.java:133)
+	at org.openqa.selenium.firefox.XpiDriverService.start(XpiDriverService.java:118)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:79)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:212)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:130)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:125)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:103)
+	at com.torenzosite.qa.base.TestBase.initialization(TestBase.java:51)
+	at com.torenzosite.qa.testcases.FeaturePageTest.setUp(FeaturePageTest.java:45)
+Caused by: org.openqa.selenium.net.UrlChecker$TimeoutException: Timed out waiting for [http://localhost:41309/hub/status] to be available after 45815 ms
+	at org.openqa.selenium.net.UrlChecker.waitUntilAvailable(UrlChecker.java:100)
+	at org.openqa.selenium.firefox.XpiDriverService.waitUntilAvailable(XpiDriverService.java:131)
+	... 37 more
+Caused by: java.util.concurrent.TimeoutException
+	at java.util.concurrent.FutureTask.get(Unknown Source)
+	at com.google.common.util.concurrent.SimpleTimeLimiter.callWithTimeout(SimpleTimeLimiter.java:156)
+	at org.openqa.selenium.net.UrlChecker.waitUntilAvailable(UrlChecker.java:75)
+	... 38 more
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1323235180", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1323235180'><pre>org.openqa.selenium.WebDriverException: Timed out waiting 45 seconds for Firefox to start.
+Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
+System info: host: &apos;DESKTOP-A3DICO7&apos;, ip: &apos;169.254.38.26&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_131&apos;
+Driver info: driver.version: FirefoxDriver
+	at org.openqa.selenium.firefox.XpiDriverService.waitUntilAvailable(XpiDriverService.java:133)
+	at org.openqa.selenium.firefox.XpiDriverService.start(XpiDriverService.java:118)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:79)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:212)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:130)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:125)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:103)
+	at com.torenzosite.qa.base.TestBase.initialization(TestBase.java:51)
+	at com.torenzosite.qa.testcases.FeaturePageTest.setUp(FeaturePageTest.java:45)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:455)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:520)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.net.UrlChecker$TimeoutException: Timed out waiting for [http://localhost:41309/hub/status] to be available after 45815 ms
+	at org.openqa.selenium.net.UrlChecker.waitUntilAvailable(UrlChecker.java:100)
+	at org.openqa.selenium.firefox.XpiDriverService.waitUntilAvailable(XpiDriverService.java:131)
+	... 37 more
+Caused by: java.util.concurrent.TimeoutException
+	at java.util.concurrent.FutureTask.get(Unknown Source)
+	at com.google.common.util.concurrent.SimpleTimeLimiter.callWithTimeout(SimpleTimeLimiter.java:156)
+	at org.openqa.selenium.net.UrlChecker.waitUntilAvailable(UrlChecker.java:75)
+	... 38 more
+</pre></div></td>
+<td>0</td>
+<td>com.torenzosite.qa.testcases.FeaturePageTest@3f49dace</td></tr>
+<tr>
+<td title='com.torenzosite.qa.testcases.FeaturePageTest.fillFormWithEmptyBussinesName()'><b>fillFormWithEmptyBussinesName</b><br>Test class: com.torenzosite.qa.testcases.FeaturePageTest<br/>
+<a href="#Output-1905758022" onClick='toggleBox("Output-1905758022", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1905758022" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1905758022">
+(About@Test Method)Test Method resides in com.torenzosite.qa.testcases.FeaturePageTest<br/>
+Test Status: Skipped<br/>
+About to begin executing following method : FeaturePageTest.fillFormWithEmptyBussinesName<br/>
+Completed executing following method : FeaturePageTest.fillFormWithEmptyBussinesName<br/>
+</div>
+</td>
+<td><div><pre>org.openqa.selenium.WebDriverException: Timed out waiting 45 seconds for Firefox to start.
+Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
+System info: host: &apos;DESKTOP-A3DICO7&apos;, ip: &apos;169.254.38.26&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_131&apos;
+Driver info: driver.version: FirefoxDriver
+	at org.openqa.selenium.firefox.XpiDriverService.waitUntilAvailable(XpiDriverService.java:133)
+	at org.openqa.selenium.firefox.XpiDriverService.start(XpiDriverService.java:118)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:79)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:212)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:130)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:125)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:103)
+	at com.torenzosite.qa.base.TestBase.initialization(TestBase.java:51)
+	at com.torenzosite.qa.testcases.FeaturePageTest.setUp(FeaturePageTest.java:45)
+Caused by: org.openqa.selenium.net.UrlChecker$TimeoutException: Timed out waiting for [http://localhost:41309/hub/status] to be available after 45815 ms
+	at org.openqa.selenium.net.UrlChecker.waitUntilAvailable(UrlChecker.java:100)
+	at org.openqa.selenium.firefox.XpiDriverService.waitUntilAvailable(XpiDriverService.java:131)
+	... 37 more
+Caused by: java.util.concurrent.TimeoutException
+	at java.util.concurrent.FutureTask.get(Unknown Source)
+	at com.google.common.util.concurrent.SimpleTimeLimiter.callWithTimeout(SimpleTimeLimiter.java:156)
+	at org.openqa.selenium.net.UrlChecker.waitUntilAvailable(UrlChecker.java:75)
+	... 38 more
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1905758022", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1905758022'><pre>org.openqa.selenium.WebDriverException: Timed out waiting 45 seconds for Firefox to start.
+Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
+System info: host: &apos;DESKTOP-A3DICO7&apos;, ip: &apos;169.254.38.26&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_131&apos;
+Driver info: driver.version: FirefoxDriver
+	at org.openqa.selenium.firefox.XpiDriverService.waitUntilAvailable(XpiDriverService.java:133)
+	at org.openqa.selenium.firefox.XpiDriverService.start(XpiDriverService.java:118)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:79)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:212)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:130)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:125)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:103)
+	at com.torenzosite.qa.base.TestBase.initialization(TestBase.java:51)
+	at com.torenzosite.qa.testcases.FeaturePageTest.setUp(FeaturePageTest.java:45)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:455)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:520)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.net.UrlChecker$TimeoutException: Timed out waiting for [http://localhost:41309/hub/status] to be available after 45815 ms
+	at org.openqa.selenium.net.UrlChecker.waitUntilAvailable(UrlChecker.java:100)
+	at org.openqa.selenium.firefox.XpiDriverService.waitUntilAvailable(XpiDriverService.java:131)
+	... 37 more
+Caused by: java.util.concurrent.TimeoutException
+	at java.util.concurrent.FutureTask.get(Unknown Source)
+	at com.google.common.util.concurrent.SimpleTimeLimiter.callWithTimeout(SimpleTimeLimiter.java:156)
+	at org.openqa.selenium.net.UrlChecker.waitUntilAvailable(UrlChecker.java:75)
+	... 38 more
+</pre></div></td>
+<td>0</td>
+<td>com.torenzosite.qa.testcases.FeaturePageTest@3f49dace</td></tr>
+<tr>
+<td title='com.torenzosite.qa.testcases.FeaturePageTest.fillFormWithEmptyData()'><b>fillFormWithEmptyData</b><br>Test class: com.torenzosite.qa.testcases.FeaturePageTest<br/>
+<a href="#Output-412410893" onClick='toggleBox("Output-412410893", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-412410893" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-412410893">
+(About@Test Method)Test Method resides in com.torenzosite.qa.testcases.FeaturePageTest<br/>
+Test Status: Skipped<br/>
+About to begin executing following method : FeaturePageTest.fillFormWithEmptyData<br/>
+Completed executing following method : FeaturePageTest.fillFormWithEmptyData<br/>
+</div>
+</td>
+<td><div><pre>org.openqa.selenium.WebDriverException: Timed out waiting 45 seconds for Firefox to start.
+Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
+System info: host: &apos;DESKTOP-A3DICO7&apos;, ip: &apos;169.254.38.26&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_131&apos;
+Driver info: driver.version: FirefoxDriver
+	at org.openqa.selenium.firefox.XpiDriverService.waitUntilAvailable(XpiDriverService.java:133)
+	at org.openqa.selenium.firefox.XpiDriverService.start(XpiDriverService.java:118)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:79)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:212)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:130)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:125)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:103)
+	at com.torenzosite.qa.base.TestBase.initialization(TestBase.java:51)
+	at com.torenzosite.qa.testcases.FeaturePageTest.setUp(FeaturePageTest.java:45)
+Caused by: org.openqa.selenium.net.UrlChecker$TimeoutException: Timed out waiting for [http://localhost:41309/hub/status] to be available after 45815 ms
+	at org.openqa.selenium.net.UrlChecker.waitUntilAvailable(UrlChecker.java:100)
+	at org.openqa.selenium.firefox.XpiDriverService.waitUntilAvailable(XpiDriverService.java:131)
+	... 37 more
+Caused by: java.util.concurrent.TimeoutException
+	at java.util.concurrent.FutureTask.get(Unknown Source)
+	at com.google.common.util.concurrent.SimpleTimeLimiter.callWithTimeout(SimpleTimeLimiter.java:156)
+	at org.openqa.selenium.net.UrlChecker.waitUntilAvailable(UrlChecker.java:75)
+	... 38 more
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace412410893", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace412410893'><pre>org.openqa.selenium.WebDriverException: Timed out waiting 45 seconds for Firefox to start.
+Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
+System info: host: &apos;DESKTOP-A3DICO7&apos;, ip: &apos;169.254.38.26&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_131&apos;
+Driver info: driver.version: FirefoxDriver
+	at org.openqa.selenium.firefox.XpiDriverService.waitUntilAvailable(XpiDriverService.java:133)
+	at org.openqa.selenium.firefox.XpiDriverService.start(XpiDriverService.java:118)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:79)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:212)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:130)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:125)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:103)
+	at com.torenzosite.qa.base.TestBase.initialization(TestBase.java:51)
+	at com.torenzosite.qa.testcases.FeaturePageTest.setUp(FeaturePageTest.java:45)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:455)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:520)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.net.UrlChecker$TimeoutException: Timed out waiting for [http://localhost:41309/hub/status] to be available after 45815 ms
+	at org.openqa.selenium.net.UrlChecker.waitUntilAvailable(UrlChecker.java:100)
+	at org.openqa.selenium.firefox.XpiDriverService.waitUntilAvailable(XpiDriverService.java:131)
+	... 37 more
+Caused by: java.util.concurrent.TimeoutException
+	at java.util.concurrent.FutureTask.get(Unknown Source)
+	at com.google.common.util.concurrent.SimpleTimeLimiter.callWithTimeout(SimpleTimeLimiter.java:156)
+	at org.openqa.selenium.net.UrlChecker.waitUntilAvailable(UrlChecker.java:75)
+	... 38 more
+</pre></div></td>
+<td>0</td>
+<td>com.torenzosite.qa.testcases.FeaturePageTest@3f49dace</td></tr>
+<tr>
+<td title='com.torenzosite.qa.testcases.FeaturePageTest.fillFormWithEmptyEmaildId()'><b>fillFormWithEmptyEmaildId</b><br>Test class: com.torenzosite.qa.testcases.FeaturePageTest<br/>
+<a href="#Output-278536229" onClick='toggleBox("Output-278536229", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-278536229" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-278536229">
+(About@Test Method)Test Method resides in com.torenzosite.qa.testcases.FeaturePageTest<br/>
+Test Status: Skipped<br/>
+About to begin executing following method : FeaturePageTest.fillFormWithEmptyEmaildId<br/>
+Completed executing following method : FeaturePageTest.fillFormWithEmptyEmaildId<br/>
+</div>
+</td>
+<td><div><pre>org.openqa.selenium.WebDriverException: Timed out waiting 45 seconds for Firefox to start.
+Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
+System info: host: &apos;DESKTOP-A3DICO7&apos;, ip: &apos;169.254.38.26&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_131&apos;
+Driver info: driver.version: FirefoxDriver
+	at org.openqa.selenium.firefox.XpiDriverService.waitUntilAvailable(XpiDriverService.java:133)
+	at org.openqa.selenium.firefox.XpiDriverService.start(XpiDriverService.java:118)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:79)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:212)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:130)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:125)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:103)
+	at com.torenzosite.qa.base.TestBase.initialization(TestBase.java:51)
+	at com.torenzosite.qa.testcases.FeaturePageTest.setUp(FeaturePageTest.java:45)
+Caused by: org.openqa.selenium.net.UrlChecker$TimeoutException: Timed out waiting for [http://localhost:41309/hub/status] to be available after 45815 ms
+	at org.openqa.selenium.net.UrlChecker.waitUntilAvailable(UrlChecker.java:100)
+	at org.openqa.selenium.firefox.XpiDriverService.waitUntilAvailable(XpiDriverService.java:131)
+	... 37 more
+Caused by: java.util.concurrent.TimeoutException
+	at java.util.concurrent.FutureTask.get(Unknown Source)
+	at com.google.common.util.concurrent.SimpleTimeLimiter.callWithTimeout(SimpleTimeLimiter.java:156)
+	at org.openqa.selenium.net.UrlChecker.waitUntilAvailable(UrlChecker.java:75)
+	... 38 more
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace278536229", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace278536229'><pre>org.openqa.selenium.WebDriverException: Timed out waiting 45 seconds for Firefox to start.
+Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
+System info: host: &apos;DESKTOP-A3DICO7&apos;, ip: &apos;169.254.38.26&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_131&apos;
+Driver info: driver.version: FirefoxDriver
+	at org.openqa.selenium.firefox.XpiDriverService.waitUntilAvailable(XpiDriverService.java:133)
+	at org.openqa.selenium.firefox.XpiDriverService.start(XpiDriverService.java:118)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:79)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:212)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:130)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:125)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:103)
+	at com.torenzosite.qa.base.TestBase.initialization(TestBase.java:51)
+	at com.torenzosite.qa.testcases.FeaturePageTest.setUp(FeaturePageTest.java:45)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:455)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:520)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.net.UrlChecker$TimeoutException: Timed out waiting for [http://localhost:41309/hub/status] to be available after 45815 ms
+	at org.openqa.selenium.net.UrlChecker.waitUntilAvailable(UrlChecker.java:100)
+	at org.openqa.selenium.firefox.XpiDriverService.waitUntilAvailable(XpiDriverService.java:131)
+	... 37 more
+Caused by: java.util.concurrent.TimeoutException
+	at java.util.concurrent.FutureTask.get(Unknown Source)
+	at com.google.common.util.concurrent.SimpleTimeLimiter.callWithTimeout(SimpleTimeLimiter.java:156)
+	at org.openqa.selenium.net.UrlChecker.waitUntilAvailable(UrlChecker.java:75)
+	... 38 more
+</pre></div></td>
+<td>0</td>
+<td>com.torenzosite.qa.testcases.FeaturePageTest@3f49dace</td></tr>
+<tr>
+<td title='com.torenzosite.qa.testcases.FeaturePageTest.fillFormWithEmptyPhoneNumber()'><b>fillFormWithEmptyPhoneNumber</b><br>Test class: com.torenzosite.qa.testcases.FeaturePageTest<br/>
+<a href="#Output-707992390" onClick='toggleBox("Output-707992390", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-707992390" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-707992390">
+(About@Test Method)Test Method resides in com.torenzosite.qa.testcases.FeaturePageTest<br/>
+Test Status: Skipped<br/>
+About to begin executing following method : FeaturePageTest.fillFormWithEmptyPhoneNumber<br/>
+Completed executing following method : FeaturePageTest.fillFormWithEmptyPhoneNumber<br/>
+</div>
+</td>
+<td><div><pre>org.openqa.selenium.WebDriverException: Timed out waiting 45 seconds for Firefox to start.
+Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
+System info: host: &apos;DESKTOP-A3DICO7&apos;, ip: &apos;169.254.38.26&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_131&apos;
+Driver info: driver.version: FirefoxDriver
+	at org.openqa.selenium.firefox.XpiDriverService.waitUntilAvailable(XpiDriverService.java:133)
+	at org.openqa.selenium.firefox.XpiDriverService.start(XpiDriverService.java:118)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:79)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:212)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:130)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:125)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:103)
+	at com.torenzosite.qa.base.TestBase.initialization(TestBase.java:51)
+	at com.torenzosite.qa.testcases.FeaturePageTest.setUp(FeaturePageTest.java:45)
+Caused by: org.openqa.selenium.net.UrlChecker$TimeoutException: Timed out waiting for [http://localhost:41309/hub/status] to be available after 45815 ms
+	at org.openqa.selenium.net.UrlChecker.waitUntilAvailable(UrlChecker.java:100)
+	at org.openqa.selenium.firefox.XpiDriverService.waitUntilAvailable(XpiDriverService.java:131)
+	... 37 more
+Caused by: java.util.concurrent.TimeoutException
+	at java.util.concurrent.FutureTask.get(Unknown Source)
+	at com.google.common.util.concurrent.SimpleTimeLimiter.callWithTimeout(SimpleTimeLimiter.java:156)
+	at org.openqa.selenium.net.UrlChecker.waitUntilAvailable(UrlChecker.java:75)
+	... 38 more
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace707992390", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace707992390'><pre>org.openqa.selenium.WebDriverException: Timed out waiting 45 seconds for Firefox to start.
+Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
+System info: host: &apos;DESKTOP-A3DICO7&apos;, ip: &apos;169.254.38.26&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_131&apos;
+Driver info: driver.version: FirefoxDriver
+	at org.openqa.selenium.firefox.XpiDriverService.waitUntilAvailable(XpiDriverService.java:133)
+	at org.openqa.selenium.firefox.XpiDriverService.start(XpiDriverService.java:118)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:79)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:212)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:130)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:125)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:103)
+	at com.torenzosite.qa.base.TestBase.initialization(TestBase.java:51)
+	at com.torenzosite.qa.testcases.FeaturePageTest.setUp(FeaturePageTest.java:45)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:455)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:520)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.net.UrlChecker$TimeoutException: Timed out waiting for [http://localhost:41309/hub/status] to be available after 45815 ms
+	at org.openqa.selenium.net.UrlChecker.waitUntilAvailable(UrlChecker.java:100)
+	at org.openqa.selenium.firefox.XpiDriverService.waitUntilAvailable(XpiDriverService.java:131)
+	... 37 more
+Caused by: java.util.concurrent.TimeoutException
+	at java.util.concurrent.FutureTask.get(Unknown Source)
+	at com.google.common.util.concurrent.SimpleTimeLimiter.callWithTimeout(SimpleTimeLimiter.java:156)
+	at org.openqa.selenium.net.UrlChecker.waitUntilAvailable(UrlChecker.java:75)
+	... 38 more
+</pre></div></td>
+<td>0</td>
+<td>com.torenzosite.qa.testcases.FeaturePageTest@3f49dace</td></tr>
+<tr>
+<td title='com.torenzosite.qa.testcases.FeaturePageTest.fillFormWithIncorrectEmailId()'><b>fillFormWithIncorrectEmailId</b><br>Test class: com.torenzosite.qa.testcases.FeaturePageTest<br/>
+<a href="#Output-557016605" onClick='toggleBox("Output-557016605", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-557016605" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-557016605">
+(About@Test Method)Test Method resides in com.torenzosite.qa.testcases.FeaturePageTest<br/>
+Test Status: Skipped<br/>
+About to begin executing following method : FeaturePageTest.fillFormWithIncorrectEmailId<br/>
+Completed executing following method : FeaturePageTest.fillFormWithIncorrectEmailId<br/>
+About to begin executing following method : LeaveUsPageTest.setUp<br/>
+</div>
+</td>
+<td><div><pre>org.openqa.selenium.WebDriverException: Timed out waiting 45 seconds for Firefox to start.
+Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
+System info: host: &apos;DESKTOP-A3DICO7&apos;, ip: &apos;169.254.38.26&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_131&apos;
+Driver info: driver.version: FirefoxDriver
+	at org.openqa.selenium.firefox.XpiDriverService.waitUntilAvailable(XpiDriverService.java:133)
+	at org.openqa.selenium.firefox.XpiDriverService.start(XpiDriverService.java:118)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:79)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:212)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:130)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:125)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:103)
+	at com.torenzosite.qa.base.TestBase.initialization(TestBase.java:51)
+	at com.torenzosite.qa.testcases.FeaturePageTest.setUp(FeaturePageTest.java:45)
+Caused by: org.openqa.selenium.net.UrlChecker$TimeoutException: Timed out waiting for [http://localhost:41309/hub/status] to be available after 45815 ms
+	at org.openqa.selenium.net.UrlChecker.waitUntilAvailable(UrlChecker.java:100)
+	at org.openqa.selenium.firefox.XpiDriverService.waitUntilAvailable(XpiDriverService.java:131)
+	... 37 more
+Caused by: java.util.concurrent.TimeoutException
+	at java.util.concurrent.FutureTask.get(Unknown Source)
+	at com.google.common.util.concurrent.SimpleTimeLimiter.callWithTimeout(SimpleTimeLimiter.java:156)
+	at org.openqa.selenium.net.UrlChecker.waitUntilAvailable(UrlChecker.java:75)
+	... 38 more
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace557016605", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace557016605'><pre>org.openqa.selenium.WebDriverException: Timed out waiting 45 seconds for Firefox to start.
+Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
+System info: host: &apos;DESKTOP-A3DICO7&apos;, ip: &apos;169.254.38.26&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_131&apos;
+Driver info: driver.version: FirefoxDriver
+	at org.openqa.selenium.firefox.XpiDriverService.waitUntilAvailable(XpiDriverService.java:133)
+	at org.openqa.selenium.firefox.XpiDriverService.start(XpiDriverService.java:118)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:79)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:212)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:130)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:125)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:103)
+	at com.torenzosite.qa.base.TestBase.initialization(TestBase.java:51)
+	at com.torenzosite.qa.testcases.FeaturePageTest.setUp(FeaturePageTest.java:45)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:455)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:520)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.net.UrlChecker$TimeoutException: Timed out waiting for [http://localhost:41309/hub/status] to be available after 45815 ms
+	at org.openqa.selenium.net.UrlChecker.waitUntilAvailable(UrlChecker.java:100)
+	at org.openqa.selenium.firefox.XpiDriverService.waitUntilAvailable(XpiDriverService.java:131)
+	... 37 more
+Caused by: java.util.concurrent.TimeoutException
+	at java.util.concurrent.FutureTask.get(Unknown Source)
+	at com.google.common.util.concurrent.SimpleTimeLimiter.callWithTimeout(SimpleTimeLimiter.java:156)
+	at org.openqa.selenium.net.UrlChecker.waitUntilAvailable(UrlChecker.java:75)
+	... 38 more
+</pre></div></td>
+<td>0</td>
+<td>com.torenzosite.qa.testcases.FeaturePageTest@3f49dace</td></tr>
+<tr>
+<td title='com.torenzosite.qa.testcases.HardwarePageTest.verifyContactUsPage()'><b>verifyContactUsPage</b><br>Test class: com.torenzosite.qa.testcases.HardwarePageTest<br/>
+<a href="#Output-1530560245" onClick='toggleBox("Output-1530560245", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1530560245" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1530560245">
+(About@Test Method)Test Method resides in com.torenzosite.qa.testcases.HardwarePageTest<br/>
+Test Status: Skipped<br/>
+About to begin executing following method : HardwarePageTest.verifyContactUsPage<br/>
+Completed executing following method : HardwarePageTest.verifyContactUsPage<br/>
+About to begin executing following method : PricingPageTest.setUp<br/>
+</div>
+</td>
+<td><div><pre>org.openqa.selenium.WebDriverException: Timed out waiting 45 seconds for Firefox to start.
+Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
+System info: host: &apos;DESKTOP-A3DICO7&apos;, ip: &apos;169.254.38.26&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_131&apos;
+Driver info: driver.version: FirefoxDriver
+	at org.openqa.selenium.firefox.XpiDriverService.waitUntilAvailable(XpiDriverService.java:133)
+	at org.openqa.selenium.firefox.XpiDriverService.start(XpiDriverService.java:118)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:79)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:212)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:130)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:125)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:103)
+	at com.torenzosite.qa.base.TestBase.initialization(TestBase.java:51)
+	at com.torenzosite.qa.testcases.HardwarePageTest.setUp(HardwarePageTest.java:37)
+Caused by: org.openqa.selenium.net.UrlChecker$TimeoutException: Timed out waiting for [http://localhost:41011/hub/status] to be available after 45001 ms
+	at org.openqa.selenium.net.UrlChecker.waitUntilAvailable(UrlChecker.java:100)
+	at org.openqa.selenium.firefox.XpiDriverService.waitUntilAvailable(XpiDriverService.java:131)
+	... 37 more
+Caused by: java.util.concurrent.TimeoutException
+	at java.util.concurrent.FutureTask.get(Unknown Source)
+	at com.google.common.util.concurrent.SimpleTimeLimiter.callWithTimeout(SimpleTimeLimiter.java:156)
+	at org.openqa.selenium.net.UrlChecker.waitUntilAvailable(UrlChecker.java:75)
+	... 38 more
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1530560245", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1530560245'><pre>org.openqa.selenium.WebDriverException: Timed out waiting 45 seconds for Firefox to start.
+Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
+System info: host: &apos;DESKTOP-A3DICO7&apos;, ip: &apos;169.254.38.26&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_131&apos;
+Driver info: driver.version: FirefoxDriver
+	at org.openqa.selenium.firefox.XpiDriverService.waitUntilAvailable(XpiDriverService.java:133)
+	at org.openqa.selenium.firefox.XpiDriverService.start(XpiDriverService.java:118)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:79)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:212)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:130)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:125)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:103)
+	at com.torenzosite.qa.base.TestBase.initialization(TestBase.java:51)
+	at com.torenzosite.qa.testcases.HardwarePageTest.setUp(HardwarePageTest.java:37)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:455)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:520)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.net.UrlChecker$TimeoutException: Timed out waiting for [http://localhost:41011/hub/status] to be available after 45001 ms
+	at org.openqa.selenium.net.UrlChecker.waitUntilAvailable(UrlChecker.java:100)
+	at org.openqa.selenium.firefox.XpiDriverService.waitUntilAvailable(XpiDriverService.java:131)
+	... 37 more
+Caused by: java.util.concurrent.TimeoutException
+	at java.util.concurrent.FutureTask.get(Unknown Source)
+	at com.google.common.util.concurrent.SimpleTimeLimiter.callWithTimeout(SimpleTimeLimiter.java:156)
+	at org.openqa.selenium.net.UrlChecker.waitUntilAvailable(UrlChecker.java:75)
+	... 38 more
+</pre></div></td>
+<td>0</td>
+<td>com.torenzosite.qa.testcases.HardwarePageTest@490ab905</td></tr>
+<tr>
+<td title='com.torenzosite.qa.testcases.HardwarePageTest.verifyHardwarePageTitle()'><b>verifyHardwarePageTitle</b><br>Test class: com.torenzosite.qa.testcases.HardwarePageTest<br/>
+<a href="#Output-1783047526" onClick='toggleBox("Output-1783047526", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1783047526" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1783047526">
+(About@Test Method)Test Method resides in com.torenzosite.qa.testcases.HardwarePageTest<br/>
+Test Status: Skipped<br/>
+About to begin executing following method : HardwarePageTest.verifyHardwarePageTitle<br/>
+Completed executing following method : HardwarePageTest.verifyHardwarePageTitle<br/>
+</div>
+</td>
+<td><div><pre>org.openqa.selenium.WebDriverException: Timed out waiting 45 seconds for Firefox to start.
+Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
+System info: host: &apos;DESKTOP-A3DICO7&apos;, ip: &apos;169.254.38.26&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_131&apos;
+Driver info: driver.version: FirefoxDriver
+	at org.openqa.selenium.firefox.XpiDriverService.waitUntilAvailable(XpiDriverService.java:133)
+	at org.openqa.selenium.firefox.XpiDriverService.start(XpiDriverService.java:118)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:79)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:212)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:130)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:125)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:103)
+	at com.torenzosite.qa.base.TestBase.initialization(TestBase.java:51)
+	at com.torenzosite.qa.testcases.HardwarePageTest.setUp(HardwarePageTest.java:37)
+Caused by: org.openqa.selenium.net.UrlChecker$TimeoutException: Timed out waiting for [http://localhost:41011/hub/status] to be available after 45001 ms
+	at org.openqa.selenium.net.UrlChecker.waitUntilAvailable(UrlChecker.java:100)
+	at org.openqa.selenium.firefox.XpiDriverService.waitUntilAvailable(XpiDriverService.java:131)
+	... 37 more
+Caused by: java.util.concurrent.TimeoutException
+	at java.util.concurrent.FutureTask.get(Unknown Source)
+	at com.google.common.util.concurrent.SimpleTimeLimiter.callWithTimeout(SimpleTimeLimiter.java:156)
+	at org.openqa.selenium.net.UrlChecker.waitUntilAvailable(UrlChecker.java:75)
+	... 38 more
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1783047526", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1783047526'><pre>org.openqa.selenium.WebDriverException: Timed out waiting 45 seconds for Firefox to start.
+Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
+System info: host: &apos;DESKTOP-A3DICO7&apos;, ip: &apos;169.254.38.26&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_131&apos;
+Driver info: driver.version: FirefoxDriver
+	at org.openqa.selenium.firefox.XpiDriverService.waitUntilAvailable(XpiDriverService.java:133)
+	at org.openqa.selenium.firefox.XpiDriverService.start(XpiDriverService.java:118)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:79)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:212)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:130)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:125)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:103)
+	at com.torenzosite.qa.base.TestBase.initialization(TestBase.java:51)
+	at com.torenzosite.qa.testcases.HardwarePageTest.setUp(HardwarePageTest.java:37)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:455)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:520)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.net.UrlChecker$TimeoutException: Timed out waiting for [http://localhost:41011/hub/status] to be available after 45001 ms
+	at org.openqa.selenium.net.UrlChecker.waitUntilAvailable(UrlChecker.java:100)
+	at org.openqa.selenium.firefox.XpiDriverService.waitUntilAvailable(XpiDriverService.java:131)
+	... 37 more
+Caused by: java.util.concurrent.TimeoutException
+	at java.util.concurrent.FutureTask.get(Unknown Source)
+	at com.google.common.util.concurrent.SimpleTimeLimiter.callWithTimeout(SimpleTimeLimiter.java:156)
+	at org.openqa.selenium.net.UrlChecker.waitUntilAvailable(UrlChecker.java:75)
+	... 38 more
+</pre></div></td>
+<td>0</td>
+<td>com.torenzosite.qa.testcases.HardwarePageTest@490ab905</td></tr>
+<tr>
+<td title='com.torenzosite.qa.testcases.LeaveUsPageTest.verifyHomePageTitle()'><b>verifyHomePageTitle</b><br>Test class: com.torenzosite.qa.testcases.LeaveUsPageTest<br/>
+<a href="#Output-1741007954" onClick='toggleBox("Output-1741007954", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1741007954" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1741007954">
+(About@Test Method)Test Method resides in com.torenzosite.qa.testcases.LeaveUsPageTest<br/>
+Test Status: Skipped<br/>
+About to begin executing following method : LeaveUsPageTest.verifyHomePageTitle<br/>
+Completed executing following method : LeaveUsPageTest.verifyHomePageTitle<br/>
+</div>
+</td>
+<td><div><pre>org.openqa.selenium.WebDriverException: Timed out waiting 45 seconds for Firefox to start.
+Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
+System info: host: &apos;DESKTOP-A3DICO7&apos;, ip: &apos;169.254.38.26&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_131&apos;
+Driver info: driver.version: FirefoxDriver
+	at org.openqa.selenium.firefox.XpiDriverService.waitUntilAvailable(XpiDriverService.java:133)
+	at org.openqa.selenium.firefox.XpiDriverService.start(XpiDriverService.java:118)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:79)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:212)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:130)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:125)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:103)
+	at com.torenzosite.qa.base.TestBase.initialization(TestBase.java:51)
+	at com.torenzosite.qa.testcases.LeaveUsPageTest.setUp(LeaveUsPageTest.java:41)
+Caused by: org.openqa.selenium.net.UrlChecker$TimeoutException: Timed out waiting for [http://localhost:21109/hub/status] to be available after 45001 ms
+	at org.openqa.selenium.net.UrlChecker.waitUntilAvailable(UrlChecker.java:100)
+	at org.openqa.selenium.firefox.XpiDriverService.waitUntilAvailable(XpiDriverService.java:131)
+	... 37 more
+Caused by: java.util.concurrent.TimeoutException
+	at java.util.concurrent.FutureTask.get(Unknown Source)
+	at com.google.common.util.concurrent.SimpleTimeLimiter.callWithTimeout(SimpleTimeLimiter.java:156)
+	at org.openqa.selenium.net.UrlChecker.waitUntilAvailable(UrlChecker.java:75)
+	... 38 more
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1741007954", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1741007954'><pre>org.openqa.selenium.WebDriverException: Timed out waiting 45 seconds for Firefox to start.
+Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
+System info: host: &apos;DESKTOP-A3DICO7&apos;, ip: &apos;169.254.38.26&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_131&apos;
+Driver info: driver.version: FirefoxDriver
+	at org.openqa.selenium.firefox.XpiDriverService.waitUntilAvailable(XpiDriverService.java:133)
+	at org.openqa.selenium.firefox.XpiDriverService.start(XpiDriverService.java:118)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:79)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:212)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:130)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:125)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:103)
+	at com.torenzosite.qa.base.TestBase.initialization(TestBase.java:51)
+	at com.torenzosite.qa.testcases.LeaveUsPageTest.setUp(LeaveUsPageTest.java:41)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:455)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:520)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.net.UrlChecker$TimeoutException: Timed out waiting for [http://localhost:21109/hub/status] to be available after 45001 ms
+	at org.openqa.selenium.net.UrlChecker.waitUntilAvailable(UrlChecker.java:100)
+	at org.openqa.selenium.firefox.XpiDriverService.waitUntilAvailable(XpiDriverService.java:131)
+	... 37 more
+Caused by: java.util.concurrent.TimeoutException
+	at java.util.concurrent.FutureTask.get(Unknown Source)
+	at com.google.common.util.concurrent.SimpleTimeLimiter.callWithTimeout(SimpleTimeLimiter.java:156)
+	at org.openqa.selenium.net.UrlChecker.waitUntilAvailable(UrlChecker.java:75)
+	... 38 more
+</pre></div></td>
+<td>0</td>
+<td>com.torenzosite.qa.testcases.LeaveUsPageTest@1e397ed7</td></tr>
+<tr>
+<td title='com.torenzosite.qa.testcases.HardwarePageTest.verifyHomePageTitle()'><b>verifyHomePageTitle</b><br>Test class: com.torenzosite.qa.testcases.HardwarePageTest<br/>
+<a href="#Output-1905280105" onClick='toggleBox("Output-1905280105", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1905280105" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1905280105">
+(About@Test Method)Test Method resides in com.torenzosite.qa.testcases.HardwarePageTest<br/>
+Test Status: Skipped<br/>
+About to begin executing following method : HardwarePageTest.verifyHomePageTitle<br/>
+Completed executing following method : HardwarePageTest.verifyHomePageTitle<br/>
+</div>
+</td>
+<td><div><pre>org.openqa.selenium.WebDriverException: Timed out waiting 45 seconds for Firefox to start.
+Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
+System info: host: &apos;DESKTOP-A3DICO7&apos;, ip: &apos;169.254.38.26&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_131&apos;
+Driver info: driver.version: FirefoxDriver
+	at org.openqa.selenium.firefox.XpiDriverService.waitUntilAvailable(XpiDriverService.java:133)
+	at org.openqa.selenium.firefox.XpiDriverService.start(XpiDriverService.java:118)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:79)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:212)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:130)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:125)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:103)
+	at com.torenzosite.qa.base.TestBase.initialization(TestBase.java:51)
+	at com.torenzosite.qa.testcases.HardwarePageTest.setUp(HardwarePageTest.java:37)
+Caused by: org.openqa.selenium.net.UrlChecker$TimeoutException: Timed out waiting for [http://localhost:41011/hub/status] to be available after 45001 ms
+	at org.openqa.selenium.net.UrlChecker.waitUntilAvailable(UrlChecker.java:100)
+	at org.openqa.selenium.firefox.XpiDriverService.waitUntilAvailable(XpiDriverService.java:131)
+	... 37 more
+Caused by: java.util.concurrent.TimeoutException
+	at java.util.concurrent.FutureTask.get(Unknown Source)
+	at com.google.common.util.concurrent.SimpleTimeLimiter.callWithTimeout(SimpleTimeLimiter.java:156)
+	at org.openqa.selenium.net.UrlChecker.waitUntilAvailable(UrlChecker.java:75)
+	... 38 more
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1905280105", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1905280105'><pre>org.openqa.selenium.WebDriverException: Timed out waiting 45 seconds for Firefox to start.
+Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
+System info: host: &apos;DESKTOP-A3DICO7&apos;, ip: &apos;169.254.38.26&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_131&apos;
+Driver info: driver.version: FirefoxDriver
+	at org.openqa.selenium.firefox.XpiDriverService.waitUntilAvailable(XpiDriverService.java:133)
+	at org.openqa.selenium.firefox.XpiDriverService.start(XpiDriverService.java:118)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:79)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:212)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:130)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:125)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:103)
+	at com.torenzosite.qa.base.TestBase.initialization(TestBase.java:51)
+	at com.torenzosite.qa.testcases.HardwarePageTest.setUp(HardwarePageTest.java:37)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:455)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:520)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.net.UrlChecker$TimeoutException: Timed out waiting for [http://localhost:41011/hub/status] to be available after 45001 ms
+	at org.openqa.selenium.net.UrlChecker.waitUntilAvailable(UrlChecker.java:100)
+	at org.openqa.selenium.firefox.XpiDriverService.waitUntilAvailable(XpiDriverService.java:131)
+	... 37 more
+Caused by: java.util.concurrent.TimeoutException
+	at java.util.concurrent.FutureTask.get(Unknown Source)
+	at com.google.common.util.concurrent.SimpleTimeLimiter.callWithTimeout(SimpleTimeLimiter.java:156)
+	at org.openqa.selenium.net.UrlChecker.waitUntilAvailable(UrlChecker.java:75)
+	... 38 more
+</pre></div></td>
+<td>0</td>
+<td>com.torenzosite.qa.testcases.HardwarePageTest@490ab905</td></tr>
+<tr>
+<td title='com.torenzosite.qa.testcases.LeaveUsPageTest.verifyLeaveUsPageTitle()'><b>verifyLeaveUsPageTitle</b><br>Test class: com.torenzosite.qa.testcases.LeaveUsPageTest<br/>
+<a href="#Output-1193939374" onClick='toggleBox("Output-1193939374", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1193939374" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1193939374">
+(About@Test Method)Test Method resides in com.torenzosite.qa.testcases.LeaveUsPageTest<br/>
+Test Status: Skipped<br/>
+About to begin executing following method : LeaveUsPageTest.verifyLeaveUsPageTitle<br/>
+Completed executing following method : LeaveUsPageTest.verifyLeaveUsPageTitle<br/>
+About to begin executing following method : HardwarePageTest.setUp<br/>
+</div>
+</td>
+<td><div><pre>org.openqa.selenium.WebDriverException: Timed out waiting 45 seconds for Firefox to start.
+Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
+System info: host: &apos;DESKTOP-A3DICO7&apos;, ip: &apos;169.254.38.26&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_131&apos;
+Driver info: driver.version: FirefoxDriver
+	at org.openqa.selenium.firefox.XpiDriverService.waitUntilAvailable(XpiDriverService.java:133)
+	at org.openqa.selenium.firefox.XpiDriverService.start(XpiDriverService.java:118)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:79)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:212)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:130)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:125)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:103)
+	at com.torenzosite.qa.base.TestBase.initialization(TestBase.java:51)
+	at com.torenzosite.qa.testcases.LeaveUsPageTest.setUp(LeaveUsPageTest.java:41)
+Caused by: org.openqa.selenium.net.UrlChecker$TimeoutException: Timed out waiting for [http://localhost:21109/hub/status] to be available after 45001 ms
+	at org.openqa.selenium.net.UrlChecker.waitUntilAvailable(UrlChecker.java:100)
+	at org.openqa.selenium.firefox.XpiDriverService.waitUntilAvailable(XpiDriverService.java:131)
+	... 37 more
+Caused by: java.util.concurrent.TimeoutException
+	at java.util.concurrent.FutureTask.get(Unknown Source)
+	at com.google.common.util.concurrent.SimpleTimeLimiter.callWithTimeout(SimpleTimeLimiter.java:156)
+	at org.openqa.selenium.net.UrlChecker.waitUntilAvailable(UrlChecker.java:75)
+	... 38 more
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1193939374", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1193939374'><pre>org.openqa.selenium.WebDriverException: Timed out waiting 45 seconds for Firefox to start.
+Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
+System info: host: &apos;DESKTOP-A3DICO7&apos;, ip: &apos;169.254.38.26&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_131&apos;
+Driver info: driver.version: FirefoxDriver
+	at org.openqa.selenium.firefox.XpiDriverService.waitUntilAvailable(XpiDriverService.java:133)
+	at org.openqa.selenium.firefox.XpiDriverService.start(XpiDriverService.java:118)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:79)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:212)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:130)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:125)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:103)
+	at com.torenzosite.qa.base.TestBase.initialization(TestBase.java:51)
+	at com.torenzosite.qa.testcases.LeaveUsPageTest.setUp(LeaveUsPageTest.java:41)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:455)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:520)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.net.UrlChecker$TimeoutException: Timed out waiting for [http://localhost:21109/hub/status] to be available after 45001 ms
+	at org.openqa.selenium.net.UrlChecker.waitUntilAvailable(UrlChecker.java:100)
+	at org.openqa.selenium.firefox.XpiDriverService.waitUntilAvailable(XpiDriverService.java:131)
+	... 37 more
+Caused by: java.util.concurrent.TimeoutException
+	at java.util.concurrent.FutureTask.get(Unknown Source)
+	at com.google.common.util.concurrent.SimpleTimeLimiter.callWithTimeout(SimpleTimeLimiter.java:156)
+	at org.openqa.selenium.net.UrlChecker.waitUntilAvailable(UrlChecker.java:75)
+	... 38 more
+</pre></div></td>
+<td>0</td>
+<td>com.torenzosite.qa.testcases.LeaveUsPageTest@1e397ed7</td></tr>
+</table><p>
+</body>
+</html>

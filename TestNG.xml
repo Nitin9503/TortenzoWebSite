@@ -1,0 +1,24 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Torenzo WebSite" verbose="1" >		
+	<listeners>		
+			<listener class-name = "com.torenzosite.qa.extentreprot.ExtentReportListener" />
+	</listeners>
+		<test name ="TorenzoTest" preserve-order="true">
+		<classes>
+				<class name = "com.torenzosite.qa.testcases.BrokenImageAndLinks" ></class>
+				<class name =  "com.torenzosite.qa.testcases.HomePageTest" ></class>
+			<!-- 	<class name =  "com.torenzosite.qa.testcases.ContactUsPageTest" ></class>
+			 	<class name = "com.torenzosite.qa.testcases.TorenzoPOSPageTest"></class>
+				<class name = "com.torenzosite.qa.testcases.FeaturePageTest" ></class>
+				<class name =  "com.torenzosite.qa.testcases.LeaveUsPageTest" ></class>
+				<class name = "com.torenzosite.qa.testcases.HardwarePageTest"></class>
+				<class name = "com.torenzosite.qa.testcases.PricingPageTest"></class>
+				<class name = "com.torenzosite.qa.testcases.TryTorenzoForFreePageTest"></class> -->
+			</classes>
+		</test>
+	</suite>
+	
+	
+	
+	
+	

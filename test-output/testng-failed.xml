@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<<<<<<< Updated upstream
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Torenzo WebSite]">
+  <listeners>
+    <listener class-name="com.torenzosite.qa.extentreprot.ExtentReportListener"/>
+  </listeners>
+  <test thread-count="5" name="TorenzoTest(failed)">
+=======
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test thread-count="5" name="Default test(failed)">
+>>>>>>> Stashed changes
+    <classes>
+      <class name="com.torenzosite.qa.testcases.HomePageTest">
+        <methods>
+          <include name="verifyEmailAddreeField"/>
+          <include name="setUp"/>
+<<<<<<< Updated upstream
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.torenzosite.qa.testcases.HomePageTest -->
+    </classes>
+  </test> <!-- TorenzoTest(failed) -->
+</suite> <!-- Failed suite [Torenzo WebSite] -->
+=======
+          <include name="verifyWithInvalidEmailAddreeField"/>
+          <include name="tearDown"/>
+          <include name="verifyHomePageTitle"/>
+          <include name="verifyWithEmptyEmailAddreeField"/>
+        </methods>
+      </class> <!-- com.torenzosite.qa.testcases.HomePageTest -->
+    </classes>
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->
+>>>>>>> Stashed changes
