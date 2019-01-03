@@ -22,7 +22,7 @@ import org.openqa.selenium.safari.SafariDriver;
 import com.torenzosite.qa.util.TestUtil;
 
 import io.appium.java_client.android.AndroidDriver;
-import io.github.bonigarcia.wdm.WebDriverManager;
+
 
 public class TestBase {
 
