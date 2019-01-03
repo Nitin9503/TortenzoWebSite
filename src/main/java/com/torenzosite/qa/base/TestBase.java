@@ -118,11 +118,11 @@ public class TestBase {
 					
 					else if (broweserName.equalsIgnoreCase("chrome")){
 
-						/*System.setProperty("webdriver.chrome.driver", "E:\\SeleniumWorkSpace\\torenzowebsite\\TorenzoWebSite\\FileDriver\\chromedriver.exe");		
+						System.setProperty("webdriver.chrome.driver", "E:\\SeleniumWorkSpace\\torenzowebsite\\TorenzoWebSite\\FileDriver\\chromedriver.exe");		
 			
-						driver = new ChromeDriver();*/
-						WebDriverManager.chromedriver().setup();
-					     driver = new ChromeDriver();
+						driver = new ChromeDriver();
+						/*WebDriverManager.chromedriver().setup();
+					     driver = new ChromeDriver();*/
 
 					}	
 		
