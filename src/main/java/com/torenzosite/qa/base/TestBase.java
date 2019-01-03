@@ -22,6 +22,7 @@ import org.openqa.selenium.safari.SafariDriver;
 import com.torenzosite.qa.util.TestUtil;
 
 import io.appium.java_client.android.AndroidDriver;
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class TestBase {
 
@@ -117,9 +118,11 @@ public class TestBase {
 					
 					else if (broweserName.equalsIgnoreCase("chrome")){
 
-						System.setProperty("webdriver.chrome.driver", "E:\\SeleniumWorkSpace\\torenzowebsite\\TorenzoWebSite\\FileDriver\\chromedriver.exe");		
+						/*System.setProperty("webdriver.chrome.driver", "E:\\SeleniumWorkSpace\\torenzowebsite\\TorenzoWebSite\\FileDriver\\chromedriver.exe");		
 			
-						driver = new ChromeDriver();
+						driver = new ChromeDriver();*/
+						WebDriverManager.chromedriver().setup();
+					     driver = new ChromeDriver();
 
 					}	
 		
