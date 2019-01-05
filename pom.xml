@@ -30,6 +30,11 @@
 		<artifactId>java-client</artifactId>
 		<version>5.0.0-BETA5</version>
 	</dependency>
+	<dependency> 
+	<groupId>com.apple</groupId> 
+	<artifactId>AppleJavaExtensions</artifactId> 
+	<version>1.4</version> 
+	</dependency>
 	<dependency>
     <groupId>com.liferay.portal</groupId>
     <artifactId>com.liferay.portal.kernel</artifactId>
