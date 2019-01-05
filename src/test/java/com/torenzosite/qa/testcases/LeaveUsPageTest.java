@@ -1,7 +1,7 @@
 package com.torenzosite.qa.testcases;
 
 import static com.torenzosite.qa.pages.TryTorenzoForFreePage.phoneNo;
-
+import static com.torenzosite.qa.util.TestUtil.OSName;
 import java.io.IOException;
 
 import org.openqa.selenium.By;
@@ -24,6 +24,7 @@ import com.torenzosite.qa.util.XlsReader;
 @Listeners(com.torenzosite.qa.listener.Listener.class)
 public class LeaveUsPageTest extends TestBase{
 
+	public static XlsReader reader;
 	HomePage homePage;
 	LeaveUsPage leaveUsPage;
 	ContactUsPage contactUsPage;
@@ -56,8 +57,15 @@ public class LeaveUsPageTest extends TestBase{
 	
 	@Test(priority=23)
 	public void verifyLeaveUsPageTitle() throws IOException, InterruptedException{
-		
-		XlsReader reader = new XlsReader("E:\\SeleniumWorkSpace\\torenzowebsite\\TorenzoWebSite\\src\\main\\java\\com\\torenzosite\\qa\\testdata\\TorenzoWorkBook.xlsx");
+
+		if (OSName.equalsIgnoreCase("Mac OS X")){
+			reader = new XlsReader("/Users/rahul.kardel/Documents/TorenzoWebSite/src/main/java/com/torenzosite/qa/testdata/TorenzoWorkBook.xlsx");
+			}
+		else if (OSName.equalsIgnoreCase("Windows 10") || OSName.equalsIgnoreCase("Windows 7") ){
+			 reader = new XlsReader("E:\\SeleniumWorkSpace\\torenzowebsite\\TorenzoWebSite\\src\\main\\java\\com\\torenzosite\\qa\\testdata\\TorenzoWorkBook.xlsx");
+				
+		}
+	
 		   int rowCount=reader.getRowCount("Sheet2");
 		   for(int rowNum=2; rowNum<=rowCount; rowNum++)
 		   {

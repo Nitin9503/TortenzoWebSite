@@ -10,6 +10,8 @@ import java.text.DecimalFormat;
 import java.util.concurrent.TimeUnit;
 
 import static com.torenzosite.qa.pages.TryTorenzoForFreePage.phoneNo;
+import static com.torenzosite.qa.util.TestUtil.OSName;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
@@ -32,7 +34,7 @@ import com.torenzosite.qa.util.TestUtil;
 import com.torenzosite.qa.util.XlsReader;
 @Listeners(com.torenzosite.qa.listener.Listener.class)
 public class TryTorenzoForFreePageTest extends TestBase {
-	
+	public static XlsReader reader;
 	HomePage homePage;
 	TryTorenzoForFreePage tryTorenzoForFreePage;
 	ContactUsPage contactUsPage;
@@ -78,8 +80,14 @@ public class TryTorenzoForFreePageTest extends TestBase {
 	
 	@Test(priority=30)
 	public void clickOnTryTorenzoForFreeAndFillForm() throws IOException, InterruptedException{
-			
-		XlsReader reader = new XlsReader("E:\\SeleniumWorkSpace\\torenzowebsite\\TorenzoWebSite\\src\\main\\java\\com\\torenzosite\\qa\\testdata\\TorenzoWorkBook.xlsx");
+
+		if (OSName.equalsIgnoreCase("Mac OS X")){
+			reader = new XlsReader("/Users/rahul.kardel/Documents/TorenzoWebSite/src/main/java/com/torenzosite/qa/testdata/TorenzoWorkBook.xlsx");
+			}
+		else if (OSName.equalsIgnoreCase("Windows 10") || OSName.equalsIgnoreCase("Windows 7") ){
+			 reader = new XlsReader("E:\\SeleniumWorkSpace\\torenzowebsite\\TorenzoWebSite\\src\\main\\java\\com\\torenzosite\\qa\\testdata\\TorenzoWorkBook.xlsx");
+				
+		}
 		   int rowCount=reader.getRowCount("Sheet1");
 		   for(int rowNum=2; rowNum<=rowCount; rowNum++)
 		   {
