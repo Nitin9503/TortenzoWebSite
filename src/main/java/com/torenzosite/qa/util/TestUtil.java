@@ -9,9 +9,15 @@ import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.StaleElementReferenceException;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.torenzosite.qa.base.TestBase;
+
+import io.appium.java_client.functions.ExpectedCondition;
 
 public class TestUtil extends TestBase{
 	
@@ -44,6 +50,14 @@ public class TestUtil extends TestBase{
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].scrollIntoView();", element);
 	
+	}
+	
+	
+	public static void clickOn(WebDriver driver, WebElement element, int timeouts){
+		
+		new WebDriverWait(driver, timeouts).ignoring(StaleElementReferenceException.class).until(ExpectedConditions.elementToBeClickable(element));
+		element.click();	
+		
 	}
 	
 	

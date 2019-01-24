@@ -45,7 +45,6 @@ public class HomePage extends TestBase {
 	WebElement ClickHereToTryTorenzoForFree;
 		
 	@FindBy(xpath= "//a[text()='Leave us a message']")
-	@CacheLookup
 	WebElement LeaveUsaMessage;
 	
 	@FindBy(xpath= "//a[text()='Privacy Policy']")

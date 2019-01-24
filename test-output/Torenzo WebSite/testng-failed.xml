@@ -1,18 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Torenzo WebSite]">
-  <listeners>
-    <listener class-name="com.torenzosite.qa.extentreprot.ExtentReportListener"/>
-  </listeners>
-  <test thread-count="5" name="TorenzoTest(failed)">
+<suite thread-count="3" guice-stage="DEVELOPMENT" name="Failed suite [Torenzo WebSite]">
+  <test thread-count="3" name="TorenzoTest(failed)">
+    <parameter name="broweserName" value="FF"/>
     <classes>
-      <class name="com.torenzosite.qa.testcases.HomePageTest">
+      <class name="com.torenzosite.qa.testcases.BrokenImageAndLinks">
         <methods>
-          <include name="verifyEmailAddreeField"/>
+          <include name="findBrokenLinkOnTorenzoMainPage"/>
           <include name="setUp"/>
           <include name="tearDown"/>
         </methods>
-      </class> <!-- com.torenzosite.qa.testcases.HomePageTest -->
+      </class> <!-- com.torenzosite.qa.testcases.BrokenImageAndLinks -->
     </classes>
   </test> <!-- TorenzoTest(failed) -->
+  <test thread-count="3" name="TorenzoTest1(failed)">
+    <parameter name="broweserName" value="chrome"/>
+    <classes>
+      <class name="com.torenzosite.qa.testcases.BrokenImageAndLinks">
+        <methods>
+          <include name="findBrokenLinkOnTorenzoMainPage"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.torenzosite.qa.testcases.BrokenImageAndLinks -->
+    </classes>
+  </test> <!-- TorenzoTest1(failed) -->
 </suite> <!-- Failed suite [Torenzo WebSite] -->

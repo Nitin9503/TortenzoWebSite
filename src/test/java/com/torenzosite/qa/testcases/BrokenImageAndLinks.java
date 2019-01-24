@@ -12,6 +12,7 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.BeforeMethod;
@@ -42,7 +43,7 @@ public class BrokenImageAndLinks extends TestBase{
 	
 	@Test(priority=0)
 	public void findBrokenLinkOnTorenzoMainPage() throws IOException{
-	
+
 	List<WebElement>linksList=driver.findElements(By.tagName("a"));
 	linksList.addAll(driver.findElements(By.tagName("img")));
 	
@@ -54,8 +55,9 @@ public class BrokenImageAndLinks extends TestBase{
 		if(linksList.get(i).getAttribute("href")!=null &&(!linksList.get(i).getAttribute("href").contains("javascript"))) {
 			activeLinks.add(linksList.get(i));
 			
+			String linkname =activeLinks.get(i).getText();
+			System.out.println("Active Total no. of link names ==> " +linkname);
 		}
-		
 	}
 	System.out.println("Active Total no. of links and images==> " +activeLinks.size());
 	for(int j=0; j<activeLinks.size();j++){
@@ -65,8 +67,7 @@ public class BrokenImageAndLinks extends TestBase{
 	   String response= connection.getResponseMessage();
 	    connection.disconnect();
 	    System.out.println(activeLinks.get(j).getAttribute("href") +"===>"+response);
-		
-		
+			
 	}
 	
 		
