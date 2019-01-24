@@ -41,6 +41,8 @@ public class TestBase {
 
 		OSName = System.getProperty("os.name");
 
+	
+		System.out.println("Active Total no. of link names ==> ");
 		System.out.println(OSName);
 		if (OSName.equalsIgnoreCase("Mac OS X")) {
 			System.out.println(OSName);
