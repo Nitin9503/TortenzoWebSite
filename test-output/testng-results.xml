@@ -8,57 +8,41 @@
       <![CDATA[Before executing test method once onlyDefault test]]>
     </line>
     <line>
-      <![CDATA[About to begin executing following method : BrokenImageAndLinks.setUp]]>
+      <![CDATA[About to begin executing following method : ContactUsPageTest.setUp]]>
     </line>
     <line>
-      <![CDATA[Completed executing following method : BrokenImageAndLinks.setUp]]>
+      <![CDATA[Completed executing following method : ContactUsPageTest.setUp]]>
     </line>
     <line>
-      <![CDATA[About to begin executing following method : BrokenImageAndLinks.findBrokenLinkOnTorenzoMainPage]]>
+      <![CDATA[About to begin executing following method : ContactUsPageTest.verifyHomePageTitle]]>
     </line>
     <line>
-      <![CDATA[Completed executing following method : BrokenImageAndLinks.findBrokenLinkOnTorenzoMainPage]]>
-    </line>
-    <line>
-      <![CDATA[About to begin executing following method : BrokenImageAndLinks.tearDown]]>
-    </line>
-    <line>
-      <![CDATA[Completed executing following method : BrokenImageAndLinks.tearDown]]>
+      <![CDATA[Completed executing following method : ContactUsPageTest.verifyHomePageTitle]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="125309" started-at="2019-01-24T05:50:18Z" finished-at="2019-01-24T05:52:24Z">
+  <suite name="Default suite" duration-ms="15180" started-at="2019-01-24T12:12:08Z" finished-at="2019-01-24T12:12:24Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="125309" started-at="2019-01-24T05:50:18Z" finished-at="2019-01-24T05:52:24Z">
-      <class name="com.torenzosite.qa.testcases.BrokenImageAndLinks">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.torenzosite.qa.testcases.BrokenImageAndLinks@2eda0940]" name="setUp" is-config="true" duration-ms="110658" started-at="2019-01-24T05:50:18Z" finished-at="2019-01-24T05:52:09Z">
+    <test name="Default test" duration-ms="15180" started-at="2019-01-24T12:12:08Z" finished-at="2019-01-24T12:12:24Z">
+      <class name="com.torenzosite.qa.testcases.ContactUsPageTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.torenzosite.qa.testcases.ContactUsPageTest@704d6e83]" name="setUp" is-config="true" duration-ms="12577" started-at="2019-01-24T12:12:08Z" finished-at="2019-01-24T12:12:21Z">
           <reporter-output>
             <line>
-              <![CDATA[Completed executing following method : BrokenImageAndLinks.setUp]]>
+              <![CDATA[Completed executing following method : ContactUsPageTest.setUp]]>
             </line>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="findBrokenLinkOnTorenzoMainPage()[pri:0, instance:com.torenzosite.qa.testcases.BrokenImageAndLinks@2eda0940]" name="findBrokenLinkOnTorenzoMainPage" duration-ms="14478" started-at="2019-01-24T05:52:09Z" finished-at="2019-01-24T05:52:23Z">
+        <test-method status="PASS" signature="verifyHomePageTitle()[pri:5, instance:com.torenzosite.qa.testcases.ContactUsPageTest@704d6e83]" name="verifyHomePageTitle" duration-ms="2576" started-at="2019-01-24T12:12:21Z" finished-at="2019-01-24T12:12:24Z">
           <reporter-output>
             <line>
-              <![CDATA[About to begin executing following method : BrokenImageAndLinks.findBrokenLinkOnTorenzoMainPage]]>
+              <![CDATA[About to begin executing following method : ContactUsPageTest.verifyHomePageTitle]]>
             </line>
             <line>
-              <![CDATA[Completed executing following method : BrokenImageAndLinks.findBrokenLinkOnTorenzoMainPage]]>
-            </line>
-            <line>
-              <![CDATA[About to begin executing following method : BrokenImageAndLinks.tearDown]]>
+              <![CDATA[Completed executing following method : ContactUsPageTest.verifyHomePageTitle]]>
             </line>
           </reporter-output>
-        </test-method> <!-- findBrokenLinkOnTorenzoMainPage -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.torenzosite.qa.testcases.BrokenImageAndLinks@2eda0940]" name="tearDown" is-config="true" duration-ms="74" started-at="2019-01-24T05:52:23Z" finished-at="2019-01-24T05:52:24Z">
-          <reporter-output>
-            <line>
-              <![CDATA[Completed executing following method : BrokenImageAndLinks.tearDown]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- com.torenzosite.qa.testcases.BrokenImageAndLinks -->
+        </test-method> <!-- verifyHomePageTitle -->
+      </class> <!-- com.torenzosite.qa.testcases.ContactUsPageTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

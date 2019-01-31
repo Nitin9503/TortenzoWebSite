@@ -19,50 +19,54 @@ import com.torenzosite.qa.pages.ContactUsPage;
 import com.torenzosite.qa.pages.HomePage;
 import com.torenzosite.qa.pages.TryTorenzoForFreePage;
 import com.torenzosite.qa.util.TestUtil;
+
 @Listeners(com.torenzosite.qa.listener.Listener.class)
 public class ContactUsPageTest extends TestBase {
 
 	HomePage homePage;
 	ContactUsPage contactUsPage;
 	TryTorenzoForFreePage tryTorenzoForFreePage;
-	
+
 	public ContactUsPageTest() throws IOException, InterruptedException {
 		super();
-		
+
 	}
 
 	@BeforeMethod
-	public void setUp() throws IOException, InterruptedException{
-		
+	public void setUp() throws IOException, InterruptedException {
+
 		initialization();
 		homePage = new HomePage();
 		tryTorenzoForFreePage = new TryTorenzoForFreePage();
-		contactUsPage =new ContactUsPage();
-		
-	} 
-	
-	@Test(priority=5)
-	public void verifyHomePageTitle(){			
-		System.out.println("Title==>" +	homePage.validateHomePageTitle());
-		Assert.assertEquals(homePage.validateHomePageTitle(), "Mobile POS Software for Businesses, Point of Sale Hardware, Retail Management Systems - Detroit, Ann Arbor, Warren | Torenzo", "Torenzo titile not found");
-		 		
+		contactUsPage = new ContactUsPage();
+
 	}
-	
-	@Test(priority=6)
-	public void verifyContactPage() throws InterruptedException, IOException{
+
+	@Test(priority = 5)
+	public void verifyHomePageTitle() throws InterruptedException {
+		System.out.println("Title==>" + homePage.validateHomePageTitle());
+		Assert.assertEquals(homePage.validateHomePageTitle(),
+				"Mobile POS Software for Businesses, Point of Sale Hardware, Retail Management Systems - Detroit, Ann Arbor, Warren | Torenzo",
+				"Torenzo titile not found");
+	}
+
+	@Test(priority = 6)
+	public void verifyContactPage() throws InterruptedException, IOException {
 		Thread.sleep(3000);
-		TestUtil.scrollUpAtEndOFPage();	
-		contactUsPage = homePage.ClickOnContactUs();		
+		TestUtil.scrollUpAtEndOFPage();
+		contactUsPage = homePage.ClickOnContactUs();
 		Thread.sleep(4000);
-		System.out.println("Title of Contact US page=>" +contactUsPage.validateContactUsPageTitile());	
-		Assert.assertEquals(contactUsPage.validateContactUsPageTitile(), "Contact Us - Detroit, Ann Arbor, Warren | Torenzo", "Contact us Page is not displayed upon clicking on Contact Us from header");		
+		System.out.println("Title of Contact US page=>" + contactUsPage.validateContactUsPageTitile());
+		Assert.assertEquals(contactUsPage.validateContactUsPageTitile(),
+				"Contact Us - Detroit, Ann Arbor, Warren | Torenzo",
+				"Contact us Page is not displayed upon clicking on Contact Us from header");
 	}
-	
-	@Test(priority=7)
-	public void fillFormToConatctUs() throws InterruptedException, IOException{
+
+	@Test(priority = 7)
+	public void fillFormToConatctUs() throws InterruptedException, IOException {
 		Thread.sleep(3000);
-		TestUtil.scrollUpAtEndOFPage();	
-		contactUsPage = homePage.ClickOnContactUs();	
+		TestUtil.scrollUpAtEndOFPage();
+		contactUsPage = homePage.ClickOnContactUs();
 		Thread.sleep(3000);
 		contactUsPage.passFirstName("Sachin");
 		contactUsPage.passLastName("Patil");
@@ -70,54 +74,57 @@ public class ContactUsPageTest extends TestBase {
 		contactUsPage.passPhoneNo("9978451232");
 		contactUsPage.passCompanyName("Torenzo");
 		contactUsPage.passSubject("For Bussiness");
-		//TestUtil.scrollUpHorizontalORVIsibilityOFElement(message);
-		contactUsPage.passMessage("Hello Team, Hope you are all doing great");		
+		// TestUtil.scrollUpHorizontalORVIsibilityOFElement(message);
+		contactUsPage.passMessage("Hello Team, Hope you are all doing great");
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("window.scrollBy(0, 500)");
 		TestUtil.scrollUpByPixel(500);
-		contactUsPage.clickOnSubmit();		
-		System.out.println("Title of Contact Us Page ==>" +contactUsPage.validateThankYouPageTitle());
-		Assert.assertEquals(contactUsPage.validateThankYouPageTitle(), "Thank You! - Detroit, Ann Arbor, Warren | Torenzo", "Thank Yo uPage Title not found after failing form and clicking on Submit");			
+		contactUsPage.clickOnSubmit();
+		System.out.println("Title of Contact Us Page ==>" + contactUsPage.validateThankYouPageTitle());
+		Assert.assertEquals(contactUsPage.validateThankYouPageTitle(),
+				"Thank You! - Detroit, Ann Arbor, Warren | Torenzo",
+				"Thank Yo uPage Title not found after failing form and clicking on Submit");
 		System.out.println("Done");
 
 	}
-	
-	@Test(priority=8)
-	public void fillFormToConatctUsWithEmpty() throws InterruptedException, IOException{
+
+	@Test(priority = 8)
+	public void fillFormToConatctUsWithEmpty() throws InterruptedException, IOException {
 		Thread.sleep(3000);
-		TestUtil.scrollUpAtEndOFPage();	
-		contactUsPage = homePage.ClickOnContactUs();	
+		TestUtil.scrollUpAtEndOFPage();
+		contactUsPage = homePage.ClickOnContactUs();
 		Thread.sleep(3000);
-	/*	contactUsPage.passFirstName("");
+		contactUsPage.passFirstName("");
 		contactUsPage.passLastName("");
 		contactUsPage.passEmailID("");
 		contactUsPage.passPhoneNo("");
 		contactUsPage.passCompanyName("");
 		contactUsPage.passSubject("");
-		//TestUtil.scrollUpHorizontalORVIsibilityOFElement(message);
-		contactUsPage.passMessage("");	*/	
+		// TestUtil.scrollUpHorizontalORVIsibilityOFElement(message);
+		contactUsPage.passMessage("");
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("window.scrollBy(0, 500)");
 		TestUtil.scrollUpByPixel(500);
-		contactUsPage.clickOnSubmit();	
+		contactUsPage.clickOnSubmit();
 		Thread.sleep(3000);
 		TestUtil.scrollUpByPixel(500);
-		System.out.println("Alert Message ==>" +contactUsPage.getTextFromAlertMessage());
-		Assert.assertEquals(contactUsPage.getTextFromAlertMessage(), "There was a problem with your submission. Errors have been highlighted below.","Validation message is missing as keeping all field empty");			
+		System.out.println("Alert Message ==>" + contactUsPage.getTextFromAlertMessage());
+		Assert.assertEquals(contactUsPage.getTextFromAlertMessage(),
+				"There was a problem with your submission. Errors have been highlighted below.",
+				"Validation message is missing as keeping all field empty");
 		System.out.println("Done");
-		System.out.println("Validation Message ==>" +contactUsPage.getTextFromValidationMessage());
-		Assert.assertEquals(contactUsPage.getTextFromValidationMessage(), "This field is required.", "Validation message is missing upon clicking on Submit with empty data");			
+		System.out.println("Validation Message ==>" + contactUsPage.getTextFromValidationMessage());
+		Assert.assertEquals(contactUsPage.getTextFromValidationMessage(), "This field is required.",
+				"Validation message is missing upon clicking on Submit with empty data");
 		System.out.println("Done");
-
 
 	}
-	
-	
-	@Test(priority=9)
-	public void fillFormToConatctUsWithIncorrectEmail() throws InterruptedException, IOException{
+
+	@Test(priority = 9)
+	public void fillFormToConatctUsWithIncorrectEmail() throws InterruptedException, IOException {
 		Thread.sleep(3000);
-		TestUtil.scrollUpAtEndOFPage();	
-		contactUsPage = homePage.ClickOnContactUs();	
+		TestUtil.scrollUpAtEndOFPage();
+		contactUsPage = homePage.ClickOnContactUs();
 		Thread.sleep(3000);
 		contactUsPage.passFirstName("Sachin");
 		contactUsPage.passLastName("Patil");
@@ -125,25 +132,27 @@ public class ContactUsPageTest extends TestBase {
 		contactUsPage.passPhoneNo("9978451232");
 		contactUsPage.passCompanyName("Torenzo");
 		contactUsPage.passSubject("For Bussiness");
-		//TestUtil.scrollUpHorizontalORVIsibilityOFElement(message);
-		contactUsPage.passMessage("Hello Team, Hope you are all doing great");		
+		// TestUtil.scrollUpHorizontalORVIsibilityOFElement(message);
+		contactUsPage.passMessage("Hello Team, Hope you are all doing great");
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("window.scrollBy(0, 500)");
 		TestUtil.scrollUpByPixel(500);
-		contactUsPage.clickOnSubmit();		
+		contactUsPage.clickOnSubmit();
 		TestUtil.scrollUpByPixel(500);
-		System.out.println("Alert Message ==>" +contactUsPage.getTextFromAlertMessage());
-		Assert.assertEquals(contactUsPage.getTextFromAlertMessage(), "There was a problem with your submission. Errors have been highlighted below.","Validation message is missing as keeping all field empty");			
+		System.out.println("Alert Message ==>" + contactUsPage.getTextFromAlertMessage());
+		Assert.assertEquals(contactUsPage.getTextFromAlertMessage(),
+				"There was a problem with your submission. Errors have been highlighted below.",
+				"Validation message is missing as keeping all field empty");
 		System.out.println("Done");
-		System.out.println("Validation Message ==>" +contactUsPage.getTextFromValidationMessage());
-		Assert.assertEquals(contactUsPage.getTextFromValidationMessage(), "Please enter a valid email address.", "Validation message is missing upon clicking on Submit with empty email id");			
+		System.out.println("Validation Message ==>" + contactUsPage.getTextFromValidationMessage());
+		Assert.assertEquals(contactUsPage.getTextFromValidationMessage(), "Please enter a valid email address.",
+				"Validation message is missing upon clicking on Submit with empty email id");
 		System.out.println("Done");
 	}
-	
-	
+
 	@AfterMethod
-	public void tearDown(){
+	public void tearDown() {
 		driver.quit();
 	}
-	
+
 }
