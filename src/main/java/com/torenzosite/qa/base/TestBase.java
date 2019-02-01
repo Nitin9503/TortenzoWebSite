@@ -9,6 +9,7 @@ import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 import static com.torenzosite.qa.util.TestUtil.OSName;
 
+import org.apache.log4j.Logger;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
@@ -35,6 +36,9 @@ public class TestBase {
 	public static WebDriver driver;
 	public static Properties prop;
 	public static String hubURL = "http://192.168.1.39:5568/wd/hub";
+	Logger log = Logger.getLogger(TestBase.class) ;
+	
+	
 	// public static String hubURL1 = "http://192.168.1.32:5566/wd/hub";
 
 	public TestBase() throws IOException, InterruptedException {
@@ -65,42 +69,42 @@ public class TestBase {
 
 		String broweserName = prop.getProperty("browser");
 		String headlessmode = prop.getProperty("headlessmode");
-		
+
 		if (OSName.equalsIgnoreCase("Mac OS X")) {
 
 			if (broweserName.equalsIgnoreCase("FF")) {
-				
-				if (headlessmode.equalsIgnoreCase("headless")){
+
+				if (headlessmode.equalsIgnoreCase("headless")) {
 					FirefoxBinary binary = new FirefoxBinary();
-					binary.addCommandLineOptions("--headless");				
+					binary.addCommandLineOptions("--headless");
 					WebDriverManager.firefoxdriver().setup();
 					FirefoxOptions option = new FirefoxOptions();
-					option.setBinary(binary); 
+					option.setBinary(binary);
 					driver = new FirefoxDriver(option);
-				}
-				else{
-					/*System.setProperty("webdriver.gecko.driver",
-							 "/usr/local/bin/geckodriver");
-							System.setProperty("webdriver.firefox.marionette", "false");*/
+				} else {
+					/*
+					 * System.setProperty("webdriver.gecko.driver",
+					 * "/usr/local/bin/geckodriver");
+					 * System.setProperty("webdriver.firefox.marionette",
+					 * "false");
+					 */
 					WebDriverManager.firefoxdriver().setup();
 					driver = new FirefoxDriver();
 				}
-				
-				
+
 			} else if (broweserName.equalsIgnoreCase("chrome")) {
 
-				if (headlessmode.equalsIgnoreCase("headless")){
-					WebDriverManager.chromedriver().setup();				
+				if (headlessmode.equalsIgnoreCase("headless")) {
+					WebDriverManager.chromedriver().setup();
 					ChromeOptions option = new ChromeOptions();
 					option.addArguments("window-size=1400,800");
-					option.addArguments("headless");                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  				
+					option.addArguments("headless");
 					driver = new ChromeDriver(option);
-				}
-				else{
-					WebDriverManager.chromedriver().setup();				                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 				
+				} else {
+					WebDriverManager.chromedriver().setup();
 					driver = new ChromeDriver();
+            
 				}
-					
 
 			} else if (broweserName.equalsIgnoreCase("safari")) {
 				// System.setProperty("webdriver.chrome.driver",
@@ -121,24 +125,28 @@ public class TestBase {
 				driver = new SafariDriver();
 			}
 
-			/*else if (broweserName.equalsIgnoreCase("chrome")) {
-				DesiredCapabilities capability = new DesiredCapabilities();
-				capability.setBrowserName("chrome");
-				capability.setPlatform(Platform.VISTA);
-				//capability.setCapability("marionette", false);
-				options = new ChromeOptions();
-				options.merge(capability);
-				driver = new RemoteWebDriver(new URL(hubURL), options);
-				
-			}*/
+			/*
+			 * else if (broweserName.equalsIgnoreCase("chrome")) {
+			 * DesiredCapabilities capability = new DesiredCapabilities();
+			 * capability.setBrowserName("chrome");
+			 * capability.setPlatform(Platform.VISTA);
+			 * //capability.setCapability("marionette", false); options = new
+			 * ChromeOptions(); options.merge(capability); driver = new
+			 * RemoteWebDriver(new URL(hubURL), options);
+			 * 
+			 * }
+			 */
 
 		} else if (OSName.equalsIgnoreCase("Windows 10") || OSName.equalsIgnoreCase("Windows 7")) {
 
 			if (broweserName.equals("FF")) {
 
-			/*	System.setProperty("webdriver.gecko.driver",
-						"E:\\SeleniumWorkSpace\\torenzowebsite\\TorenzoWebSite\\FileDriver\\geckodriver.exe");
-				System.setProperty("webdriver.firefox.marionette", "false");*/
+				/*
+				 * System.setProperty("webdriver.gecko.driver",
+				 * "E:\\SeleniumWorkSpace\\torenzowebsite\\TorenzoWebSite\\FileDriver\\geckodriver.exe"
+				 * ); System.setProperty("webdriver.firefox.marionette",
+				 * "false");
+				 */
 
 				WebDriverManager.firefoxdriver().setup();
 				driver = new FirefoxDriver();
@@ -146,8 +154,11 @@ public class TestBase {
 
 			else if (broweserName.equalsIgnoreCase("chrome")) {
 
-				/*System.setProperty("webdriver.chrome.driver",
-						"E:\\SeleniumWorkSpace\\torenzowebsite\\TorenzoWebSite\\FileDriver\\chromedriver.exe");*/
+				/*
+				 * System.setProperty("webdriver.chrome.driver",
+				 * "E:\\SeleniumWorkSpace\\torenzowebsite\\TorenzoWebSite\\FileDriver\\chromedriver.exe"
+				 * );
+				 */
 
 				WebDriverManager.firefoxdriver().setup();
 				driver = new ChromeDriver();
@@ -161,13 +172,13 @@ public class TestBase {
 			}
 
 		}
-		
-	
+
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
-	
+
 		driver.manage().timeouts().pageLoadTimeout(TestUtil.PAGE_LOAD_TIMEOUT, TimeUnit.SECONDS);
 		driver.manage().timeouts().implicitlyWait(TestUtil.IMPLICIT_WAIT, TimeUnit.SECONDS);
+		
 		driver.get(prop.getProperty("torenzoURL"));
 		// driver.get(prop.getProperty("url1"));
 		// driver.get("https://www.ixigo.com/trains");

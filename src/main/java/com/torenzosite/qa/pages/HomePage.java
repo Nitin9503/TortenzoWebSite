@@ -15,9 +15,7 @@ public class HomePage extends TestBase {
 	WebElement torenzoPOS;
 	
 	@FindBy(linkText= "Features")
-	@CacheLookup
 	WebElement features;
-
 
 	@FindBy(linkText= "Hardware")
 	@CacheLookup

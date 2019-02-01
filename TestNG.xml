@@ -4,9 +4,7 @@
 	<listeners>		
 			<listener class-name = "com.torenzosite.qa.extentreprot.ExtentReportListener" />
 	</listeners> 
-		<test name ="TorenzoTest" >
-		     <parameter name ="broweserName" value="FF"/>
-		    
+		<test name ="TorenzoTest" >	    
 		<classes>
 				<class name = "com.torenzosite.qa.testcases.BrokenImageAndLinks" ></class>
 		 		<class name =  "com.torenzosite.qa.testcases.HomePageTest" ></class>

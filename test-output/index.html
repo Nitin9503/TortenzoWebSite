@@ -91,7 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">4 methods,   4 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -102,7 +102,22 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.torenzosite.qa.testcases.ContactUsPageTest" hash-for-method="verifyHomePageTitle">verifyHomePageTitle</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.torenzosite.qa.testcases.HomePageTest" hash-for-method="verifyEmailAddreeField">verifyEmailAddreeField</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.torenzosite.qa.testcases.HomePageTest" hash-for-method="verifyHomePageTitle">verifyHomePageTitle</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.torenzosite.qa.testcases.HomePageTest" hash-for-method="verifyWithEmptyEmailAddreeField">verifyWithEmptyEmailAddreeField</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.torenzosite.qa.testcases.HomePageTest" hash-for-method="verifyWithInvalidEmailAddreeField">verifyWithInvalidEmailAddreeField</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -120,14 +135,43 @@
           <div class="suite-Default_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">com.torenzosite.qa.testcases.ContactUsPageTest</span>
+              <span class="class-name">com.torenzosite.qa.testcases.HomePageTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyEmailAddreeField">
+                  </a> <!-- verifyEmailAddreeField -->
+                  <span class="method-name">verifyEmailAddreeField</span>
+                  <em>
+( verify Email Addree Field)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
                   <a name="verifyHomePageTitle">
                   </a> <!-- verifyHomePageTitle -->
                   <span class="method-name">verifyHomePageTitle</span>
+                  <em>
+( verify Home Page Title)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyWithEmptyEmailAddreeField">
+                  </a> <!-- verifyWithEmptyEmailAddreeField -->
+                  <span class="method-name">verifyWithEmptyEmailAddreeField</span>
+                  <em>
+( verify Email Addree Field with email id)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyWithInvalidEmailAddreeField">
+                  </a> <!-- verifyWithInvalidEmailAddreeField -->
+                  <span class="method-name">verifyWithInvalidEmailAddreeField</span>
+                  <em>
+( verify Email Addree Field with inemail id)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -135,7 +179,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">/private/var/folders/kx/zbpb8zjd5rs7mzf082jbxd380000gn/T/testng-eclipse--300724299/testng-customsuite.xml</span>
+            <span class="header-content">/private/var/folders/kx/zbpb8zjd5rs7mzf082jbxd380000gn/T/testng-eclipse--578194681/testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -144,7 +188,7 @@
 &lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Default suite&quot;&gt;
   &lt;test thread-count=&quot;5&quot; verbose=&quot;2&quot; name=&quot;Default test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.torenzosite.qa.testcases.ContactUsPageTest&quot;/&gt;
+      &lt;class name=&quot;com.torenzosite.qa.testcases.HomePageTest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -184,16 +228,28 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(4);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'verifyHomePageTitle')
-data.setCell(0, 2, 'com.torenzosite.qa.testcases.ContactUsPageTest')
-data.setCell(0, 3, 2576);
+data.setCell(0, 1, 'verifyWithEmptyEmailAddreeField')
+data.setCell(0, 2, 'com.torenzosite.qa.testcases.HomePageTest')
+data.setCell(0, 3, 18509);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'verifyWithInvalidEmailAddreeField')
+data.setCell(1, 2, 'com.torenzosite.qa.testcases.HomePageTest')
+data.setCell(1, 3, 18367);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'verifyEmailAddreeField')
+data.setCell(2, 2, 'com.torenzosite.qa.testcases.HomePageTest')
+data.setCell(2, 3, 2586);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'verifyHomePageTitle')
+data.setCell(3, 2, 'com.torenzosite.qa.testcases.HomePageTest')
+data.setCell(3, 3, 263);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 2 seconds</span>
+              <span class="suite-total-time">Total running time: 39 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -205,10 +261,35 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="reporter-method-div">
+              <span class="reporter-method-name">verifyEmailAddreeField</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">About to begin executing following method : HomePageTest.verifyEmailAddreeField</span>
+                <span class="reporter-method-output">Completed executing following method : HomePageTest.verifyEmailAddreeField</span>
+                <span class="reporter-method-output">About to begin executing following method : HomePageTest.tearDown</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">verifyWithEmptyEmailAddreeField</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">About to begin executing following method : HomePageTest.verifyWithEmptyEmailAddreeField</span>
+                <span class="reporter-method-output">Completed executing following method : HomePageTest.verifyWithEmptyEmailAddreeField</span>
+                <span class="reporter-method-output">About to begin executing following method : HomePageTest.tearDown</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
               <span class="reporter-method-name">verifyHomePageTitle</span>
               <div class="reporter-method-output-div">
-                <span class="reporter-method-output">About to begin executing following method : ContactUsPageTest.verifyHomePageTitle</span>
-                <span class="reporter-method-output">Completed executing following method : ContactUsPageTest.verifyHomePageTitle</span>
+                <span class="reporter-method-output">About to begin executing following method : HomePageTest.verifyHomePageTitle</span>
+                <span class="reporter-method-output">Completed executing following method : HomePageTest.verifyHomePageTitle</span>
+                <span class="reporter-method-output">About to begin executing following method : HomePageTest.tearDown</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">verifyWithInvalidEmailAddreeField</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">About to begin executing following method : HomePageTest.verifyWithInvalidEmailAddreeField</span>
+                <span class="reporter-method-output">Completed executing following method : HomePageTest.verifyWithInvalidEmailAddreeField</span>
+                <span class="reporter-method-output">About to begin executing following method : HomePageTest.tearDown</span>
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -226,15 +307,55 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.torenzosite.qa.testcases.ContactUsPageTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.torenzosite.qa.testcases.HomePageTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyHomePageTitle</span>
-                <span class="method-start">12578 ms</span>
+                <span class="method-start">12996 ms</span>
               </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">13263 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">13771 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyEmailAddreeField</span>
+                <span class="method-start">21941 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">24529 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">24750 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyWithEmptyEmailAddreeField</span>
+                <span class="method-start">30732 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">49242 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">49475 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyWithInvalidEmailAddreeField</span>
+                <span class="method-start">52965 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">71334 ms</span>
+              </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->
