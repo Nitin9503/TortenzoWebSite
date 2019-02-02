@@ -1,20 +1,4 @@
 package com.torenzosite.qa.util;
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.PrintWriter;
-import java.net.PasswordAuthentication;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.List;
-import java.util.Properties;
-import java.util.logging.Level;
-
 import javax.activation.DataHandler;
 import javax.activation.DataSource;
 import javax.activation.FileDataSource;
@@ -24,14 +8,15 @@ import javax.mail.MessagingException;
 import javax.mail.Multipart;
 import javax.mail.Session;
 import javax.mail.Transport;
-import javax.mail.internet.AddressException;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeBodyPart;
 import javax.mail.internet.MimeMessage;
 import javax.mail.internet.MimeMultipart;
+
 import static com.torenzosite.qa.util.TestUtil.OSName;
-import org.openqa.selenium.logging.LogEntry;
 import static com.torenzosite.qa.util.TestUtil.screenshotName;
+
+import java.util.Properties;
 public class SendAttachmentInEmail {
 		
 	public static void main(String[] args) throws InterruptedException {

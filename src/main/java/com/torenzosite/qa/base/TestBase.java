@@ -32,19 +32,17 @@ import io.appium.java_client.android.AndroidDriver;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class TestBase {
-
+	// public static String hubURL1 = "http://192.168.1.32:5566/wd/hub";
 	public static WebDriver driver;
 	public static Properties prop;
 	public static String hubURL = "http://192.168.1.39:5568/wd/hub";
-	Logger log = Logger.getLogger(TestBase.class) ;
+	Logger log = Logger.getLogger(TestBase.class) ;	
+	public static final String USERNAME = "sachin1";
+	public static final String ACCESS_KEY = "0576f84d-89b5-4a1e-8eee-f19e4bb26729";
+	public static final String SauceLabURL = "https://" + USERNAME + ":" + ACCESS_KEY + "@ondemand.saucelabs.com:443/wd/hub";	
 	
-	
-	// public static String hubURL1 = "http://192.168.1.32:5566/wd/hub";
-
 	public TestBase() throws IOException, InterruptedException {
-
 		OSName = System.getProperty("os.name");
-
 		System.out.println(OSName);
 		if (OSName.equalsIgnoreCase("Mac OS X")) {
 			System.out.println(OSName);
@@ -61,127 +59,127 @@ public class TestBase {
 					"E:\\SeleniumWorkSpace\\torenzowebsite\\TorenzoWebSite\\src\\main\\java\\com\\torenzosite\\qa\\config\\config.properties");
 			prop.load(fis);
 			System.out.println(OSName);
-
 		}
 	}
 
 	public static void initialization() throws InterruptedException, MalformedURLException {
-
 		String broweserName = prop.getProperty("browser");
 		String headlessmode = prop.getProperty("headlessmode");
-
+        String testOnCloud = prop.getProperty("cloud");    
+        String cloudBrowser = prop.getProperty("browserOnCloud");  
 		if (OSName.equalsIgnoreCase("Mac OS X")) {
 
-			if (broweserName.equalsIgnoreCase("FF")) {
-
+			if (broweserName.equalsIgnoreCase("FF")) {				
 				if (headlessmode.equalsIgnoreCase("headless")) {
+					System.out.println("Execution on HeadLess FF Browser");
 					FirefoxBinary binary = new FirefoxBinary();
 					binary.addCommandLineOptions("--headless");
 					WebDriverManager.firefoxdriver().setup();
 					FirefoxOptions option = new FirefoxOptions();
 					option.setBinary(binary);
 					driver = new FirefoxDriver(option);
-				} else {
-					/*
-					 * System.setProperty("webdriver.gecko.driver",
-					 * "/usr/local/bin/geckodriver");
-					 * System.setProperty("webdriver.firefox.marionette",
-					 * "false");
-					 */
+				} else {	
+					System.out.println("Execution on Normal FF Browser");
+					  /*System.setProperty("webdriver.gecko.driver", "/usr/local/bin/geckodriver");
+					  System.setProperty("webdriver.firefox.marionette", "false");*/				
 					WebDriverManager.firefoxdriver().setup();
-					driver = new FirefoxDriver();
+					driver = new FirefoxDriver();					
 				}
-
+				
 			} else if (broweserName.equalsIgnoreCase("chrome")) {
-
 				if (headlessmode.equalsIgnoreCase("headless")) {
+					System.out.println("Execution on HeadLess Chrome Browser");
 					WebDriverManager.chromedriver().setup();
 					ChromeOptions option = new ChromeOptions();
 					option.addArguments("window-size=1400,800");
 					option.addArguments("headless");
 					driver = new ChromeDriver(option);
 				} else {
+					System.out.println("Execution on Normal FF Browser");
 					WebDriverManager.chromedriver().setup();
-					driver = new ChromeDriver();
-            
+					driver = new ChromeDriver();           
 				}
-
 			} else if (broweserName.equalsIgnoreCase("safari")) {
-				// System.setProperty("webdriver.chrome.driver",
-				// "/Users/rahul.kardel/Downloads/chromedriver");
+
 				driver = new SafariDriver();
 			}
-
 			else if (broweserName.equalsIgnoreCase("IE")) {
-				// System.setProperty("webdriver.chrome.driver",
-				// "/Users/rahul.kardel/Documents/browser/chromedriver");
-
+				// System.setProperty("webdriver.chrome.driver", "/Users/rahul.kardel/Documents/browser/chromedriver");
 				WebDriverManager.iedriver().setup();
 				driver = new ChromeDriver();
-
 			} else if (broweserName.equalsIgnoreCase("safari")) {
 				// System.setProperty("webdriver.chrome.driver",
 				// "/Users/rahul.kardel/Documents/browser/chromedriver");
 				driver = new SafariDriver();
 			}
 
-			/*
-			 * else if (broweserName.equalsIgnoreCase("chrome")) {
-			 * DesiredCapabilities capability = new DesiredCapabilities();
-			 * capability.setBrowserName("chrome");
-			 * capability.setPlatform(Platform.VISTA);
-			 * //capability.setCapability("marionette", false); options = new
-			 * ChromeOptions(); options.merge(capability); driver = new
-			 * RemoteWebDriver(new URL(hubURL), options);
-			 * 
-			 * }
-			 */
-
+			else if (testOnCloud.equalsIgnoreCase("SauceLab")){
+				
+				if (cloudBrowser.equalsIgnoreCase("FF")){		
+					System.out.println("Execution on SauceLa FF Browser");
+					System.out.println("Testing Sauce Lab Cloud");
+					DesiredCapabilities caps =  new DesiredCapabilities().firefox();
+					caps.setCapability("platform", "Windows 10");
+					caps.setCapability("version", "52");
+					caps.setCapability("name", "Testing on Firfox 52");
+					driver = new RemoteWebDriver(new URL(SauceLabURL), caps);
+					
+				}
+				else if (cloudBrowser.equalsIgnoreCase("chrome")){
+					System.out.println("Execution on SauceLa chrome Browser");
+					System.out.println("Testing Sauce Lab Cloud");
+					DesiredCapabilities caps =  new DesiredCapabilities().chrome();
+					caps.setCapability("platform", "Windows 8");
+					caps.setCapability("version", "65");
+					caps.setCapability("name", "Testing on Chrome 65");
+					driver = new RemoteWebDriver(new URL(SauceLabURL), caps);
+				}
+				else if (cloudBrowser.equalsIgnoreCase("IE")){
+					System.out.println("Execution on SauceLa IE Browser");
+					System.out.println("Testing Sauce Lab Cloud");
+					DesiredCapabilities caps =  new DesiredCapabilities().internetExplorer();
+					caps.setCapability("platform", "Windows 7");
+					caps.setCapability("version", "11");
+					caps.setCapability("name", "Testing on IE 11");
+					driver = new RemoteWebDriver(new URL(SauceLabURL), caps);				
+				}
+				else if (cloudBrowser.equalsIgnoreCase("safari")){
+					System.out.println("Execution on SauceLa IE Browser");
+					System.out.println("Testing Sauce Lab Cloud");
+					DesiredCapabilities caps = DesiredCapabilities.safari();
+					caps.setCapability("platform", "OS X 10.9");
+					caps.setCapability("version", "7.0");
+					caps.setCapability("name", "Testing on Safari 7.0");
+					driver = new RemoteWebDriver(new URL(SauceLabURL), caps);				
+				}
+				
+			}						
+		
 		} else if (OSName.equalsIgnoreCase("Windows 10") || OSName.equalsIgnoreCase("Windows 7")) {
-
-			if (broweserName.equals("FF")) {
-
-				/*
-				 * System.setProperty("webdriver.gecko.driver",
-				 * "E:\\SeleniumWorkSpace\\torenzowebsite\\TorenzoWebSite\\FileDriver\\geckodriver.exe"
-				 * ); System.setProperty("webdriver.firefox.marionette",
-				 * "false");
-				 */
-
-				WebDriverManager.firefoxdriver().setup();
+			if (broweserName.equals("FF")) {	
+				  System.setProperty("webdriver.gecko.driver", "E:\\SeleniumWorkSpace\\torenzowebsite\\TorenzoWebSite\\FileDriver\\geckodriver.exe"
+				  ); System.setProperty("webdriver.firefox.marionette", "false");
+			//	WebDriverManager.firefoxdriver().setup();
 				driver = new FirefoxDriver();
 			}
-
 			else if (broweserName.equalsIgnoreCase("chrome")) {
-
-				/*
-				 * System.setProperty("webdriver.chrome.driver",
-				 * "E:\\SeleniumWorkSpace\\torenzowebsite\\TorenzoWebSite\\FileDriver\\chromedriver.exe"
-				 * );
-				 */
-
-				WebDriverManager.firefoxdriver().setup();
+				 System.setProperty("webdriver.chrome.driver","E:\\SeleniumWorkSpace\\torenzowebsite\\TorenzoWebSite\\FileDriver\\chromedriver.exe" );
+				//WebDriverManager.firefoxdriver().setup();
 				driver = new ChromeDriver();
-
 			}
 
 			else if (broweserName.equalsIgnoreCase("IE")) {
-
 				WebDriverManager.iedriver().setup();
 				driver = new InternetExplorerDriver();
 			}
-
 		}
-
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
-
 		driver.manage().timeouts().pageLoadTimeout(TestUtil.PAGE_LOAD_TIMEOUT, TimeUnit.SECONDS);
-		driver.manage().timeouts().implicitlyWait(TestUtil.IMPLICIT_WAIT, TimeUnit.SECONDS);
-		
-		driver.get(prop.getProperty("torenzoURL"));
+		driver.manage().timeouts().implicitlyWait(TestUtil.IMPLICIT_WAIT, TimeUnit.SECONDS);		
+		driver.get(prop.getProperty("torenzoURL"));	
 		// driver.get(prop.getProperty("url1"));
 		// driver.get("https://www.ixigo.com/trains");
-
 	}
+
 }

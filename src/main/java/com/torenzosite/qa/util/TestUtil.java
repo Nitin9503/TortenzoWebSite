@@ -13,6 +13,7 @@ import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.gargoylesoftware.htmlunit.javascript.background.JavaScriptExecutor;
@@ -76,6 +77,45 @@ public class TestUtil extends TestBase {
 		JavascriptExecutor js = ((JavascriptExecutor) driver);
 		js.executeScript("arguments[0].style.backgroundcolor = '"+color+"'", element);
  
+	}
+	public void typeText(WebElement element, String value) {
+		element.clear();
+		element.sendKeys(value);
+	}
+
+	public static void selectValuefromDropDown(WebElement element, int value) {
+		Select sel = new Select(element);
+		sel.selectByIndex(value);
+	}
+
+	public static boolean isElementDisplayed(WebElement element) {
+		return element.isDisplayed();
+	}
+
+	public static void runJavaScript(String command) {
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript(command);
+	}
+
+	public static void uploadfile(WebElement element, String path) {
+		element.sendKeys(path);
+	}
+	public static void waitForElement(WebElement element, int maxTimeout) {
+		WebDriverWait wait = new WebDriverWait(driver, maxTimeout);
+		wait.until(ExpectedConditions.elementToBeClickable(element));
+		element.click();
+	}
+
+	public static void waitForElementforClick(WebElement element, int maxTimeout) {
+		WebDriverWait wait = new WebDriverWait(driver, maxTimeout);
+		wait.until(ExpectedConditions.elementToBeClickable(element));
+		element.click();
+	}
+
+	public static void waitForElementforType(WebElement element, int maxTimeout, String value) {
+		WebDriverWait wait = new WebDriverWait(driver, maxTimeout);
+		wait.until(ExpectedConditions.elementToBeClickable(element));
+		element.sendKeys(value);
 	}
 
 }
