@@ -3,6 +3,7 @@ package com.torenzosite.qa.util;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.Properties;
 
 import org.apache.poi.hslf.model.Sheet;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
@@ -32,9 +33,17 @@ public class TestUtil extends TestBase {
 	public static long IMPLICIT_WAIT = 120;
 	public static String title = "";
 	public static String OSName = "";
-
 	public static String screenshotName = "";
+	
+	// Static variable for Launch activety of browser
+	public static Properties prop;
+	public static String driverPath;
+	public static String hubURL = "http://192.168.1.39:5568/wd/hub";	
+	public static final String USERNAME = "sachin1";
+	public static final String ACCESS_KEY = "0576f84d-89b5-4a1e-8eee-f19e4bb26729";
+	public static final String SauceLabURL = "https://" + USERNAME + ":" + ACCESS_KEY + "@ondemand.saucelabs.com:443/wd/hub";	
 
+	// Static methods
 	public static void scrollUpByPixel(int pixel) {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("window.scrollBy(0, 'pixel')");

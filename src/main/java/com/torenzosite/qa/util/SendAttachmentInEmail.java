@@ -12,7 +12,7 @@ import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeBodyPart;
 import javax.mail.internet.MimeMessage;
 import javax.mail.internet.MimeMultipart;
-
+import static com.torenzosite.qa.util.TestUtil.driverPath;
 import static com.torenzosite.qa.util.TestUtil.OSName;
 import static com.torenzosite.qa.util.TestUtil.screenshotName;
 
@@ -20,10 +20,10 @@ import java.util.Properties;
 public class SendAttachmentInEmail {
 		
 	public static void main(String[] args) throws InterruptedException {
+
 		SendAttachmentInEmail ml = new SendAttachmentInEmail();
 		ml.email();
 		}
-	
 	   String filename2;
 	   String filename;		
        String image;
@@ -43,7 +43,6 @@ public class SendAttachmentInEmail {
 			    props.put("mail.smtp.port", 587);
 			    props.put("-Djava.net.preferIPv4Stack", "true");
 			    props.setProperty("mail.smtp.host", host);
-
 		  Session session = Session.getDefaultInstance(props,
 				  
 				         new javax.mail.Authenticator() {
@@ -71,27 +70,25 @@ public class SendAttachmentInEmail {
 		         BodyPart messageBodyPart1 = new MimeBodyPart();
 		    
 		         if(OSName.equalsIgnoreCase("Mac OS X")){
-		             image = "/Users/rahul.kardel/Documents/TorenzoWebSite/Screenshot/"+ screenshotName +".jpeg";
+		             image = driverPath+"/Screenshot/"+ screenshotName +".jpeg";
 			          messageBodyPart1.setContent(image, "text/html"); 
 		         }
 		         else if(OSName.equalsIgnoreCase("Windows 7")||OSName.equalsIgnoreCase("Windows 10")){
 		        	 
-			          image = "E:\\SeleniumWorkSpace\\torenzowebsite\\TorenzoWebSite\\Screenshot\\"+ screenshotName +".jpeg";
-			          messageBodyPart1.setContent(image, "text/html");
-		          
-		        	 
+			          image = driverPath+"\\Screenshot\\"+ screenshotName +".jpeg";
+			          messageBodyPart1.setContent(image, "text/html");	        	 
 		         }
 	        
 		         multipart1.addBodyPart(messageBodyPart1);
 		         messageBodyPart1 = new MimeBodyPart();
 		         if(OSName.equalsIgnoreCase("Mac OS X")){
 
-			    	  fds = new FileDataSource("/Users/rahul.kardel/Documents/TorenzoWebSite/Screenshot/"+ screenshotName +".jpeg");
+			    	  fds = new FileDataSource(driverPath+"/Screenshot/"+ screenshotName +".jpeg");
 			    	   messageBodyPart1.setDataHandler(new DataHandler(fds));
 		         }
 		         else if(OSName.equalsIgnoreCase("Windows 7")||OSName.equalsIgnoreCase("Windows 10")){
 
-			    	  fds = new FileDataSource("E:\\SeleniumWorkSpace\\torenzowebsite\\TorenzoWebSite\\Screenshot\\"+ screenshotName +".jpeg");
+			    	  fds = new FileDataSource(driverPath+"\\Screenshot\\"+ screenshotName +".jpeg");
 			    	   messageBodyPart1.setDataHandler(new DataHandler(fds)); 
 		         }
 
@@ -146,13 +143,13 @@ public class SendAttachmentInEmail {
 		       messageBodyPart = new MimeBodyPart();
 		       Thread.sleep(5000);	
 		       if(OSName.equalsIgnoreCase("Mac OS X")){
-		    		filename = "/Users/rahul.kardel/Documents/TorenzoWebSite/test-output/TorenzoWebSiteReport.html"; 
+		    		filename = driverPath+"/test-output/TorenzoWebSiteReport.html"; 
 			    	   DataSource source = new FileDataSource(filename);
 			    	   messageBodyPart.setDataHandler(new DataHandler(source));
 			    	     messageBodyPart.setFileName(filename);  
 		       }
 		       else if(OSName.equalsIgnoreCase("Windows 7")||OSName.equalsIgnoreCase("Windows 10")){
-		    		filename = "E:\\SeleniumWorkSpace\\torenzowebsite\\TorenzoWebSite\\test-output\\TorenzoWebSiteReport.html"; 
+		    		filename = driverPath+"\\test-output\\TorenzoWebSiteReport.html"; 
 			    	   DataSource source = new FileDataSource(filename);
 			    	   messageBodyPart.setDataHandler(new DataHandler(source));
 			    	     messageBodyPart.setFileName(filename);   
@@ -184,13 +181,13 @@ public class SendAttachmentInEmail {
 			       messageBodyPart2 = new MimeBodyPart();
 			       Thread.sleep(5000);
 			       if(OSName.equalsIgnoreCase("Mac OS X")){
-			    	   filename2 = "/Users/rahul.kardel/Documents/TorenzoWebSite/test-output/emailable-report.html";
+			    	   filename2 = driverPath+"/test-output/emailable-report.html";
 				  	     DataSource source = new FileDataSource(filename2);
 				 	    messageBodyPart2.setDataHandler(new DataHandler(source));
 				 	     messageBodyPart2.setFileName(filename2);   
 			       }
 			       else if(OSName.equalsIgnoreCase("Windows 7")||OSName.equalsIgnoreCase("Windows 10")){
-			    	   filename2 = "E:\\SeleniumWorkSpace\\torenzowebsite\\TorenzoWebSite\\test-output\\emailable-report.html";
+			    	   filename2 = driverPath+"\\test-output\\emailable-report.html";
 				  	     DataSource source = new FileDataSource(filename2);
 				 	    messageBodyPart2.setDataHandler(new DataHandler(source));
 				 	     messageBodyPart2.setFileName(filename2);  

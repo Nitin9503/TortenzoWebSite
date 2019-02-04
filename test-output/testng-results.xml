@@ -65,26 +65,26 @@
       <![CDATA[After executing test method once onlyDefault test]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="5085" started-at="2019-02-02T12:45:10Z" finished-at="2019-02-02T12:45:15Z">
+  <suite name="Default suite" duration-ms="1125" started-at="2019-02-04T11:23:05Z" finished-at="2019-02-04T11:23:06Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="5085" started-at="2019-02-02T12:45:10Z" finished-at="2019-02-02T12:45:15Z">
+    <test name="Default test" duration-ms="1125" started-at="2019-02-04T11:23:05Z" finished-at="2019-02-04T11:23:06Z">
       <class name="com.torenzosite.qa.testcases.HomePageTest">
-        <test-method status="FAIL" signature="setUp()[pri:0, instance:com.torenzosite.qa.testcases.HomePageTest@4e4aea35]" name="setUp" is-config="true" duration-ms="5024" started-at="2019-02-02T12:45:10Z" finished-at="2019-02-02T12:45:15Z">
-          <exception class="org.openqa.selenium.WebDriverException">
+        <test-method status="FAIL" signature="setUp()[pri:0, instance:com.torenzosite.qa.testcases.HomePageTest@2eda0940]" name="setUp" is-config="true" duration-ms="1044" started-at="2019-02-04T11:23:05Z" finished-at="2019-02-04T11:23:06Z">
+          <exception class="java.lang.NullPointerException">
             <message>
-              <![CDATA[Unable to parse remote response: Misconfigured -- Unsupported OS/browser/version/device combo: OS: 'OS X 10.9', Browser: 'safari', Version: '7.0.', Device: 'unspecified']]>
+              <![CDATA[null value in entry: desiredCapabilities=null]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.WebDriverException: Unable to parse remote response: Misconfigured -- Unsupported OS/browser/version/device combo: OS: 'OS X 10.9', Browser: 'safari', Version: '7.0.', Device: 'unspecified'
-at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:111)
-at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:73)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
-at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:212)
+              <![CDATA[java.lang.NullPointerException: null value in entry: desiredCapabilities=null
+at com.google.common.collect.CollectPreconditions.checkEntryNotNull(CollectPreconditions.java:32)
+at com.google.common.collect.SingletonImmutableBiMap.<init>(SingletonImmutableBiMap.java:42)
+at com.google.common.collect.ImmutableBiMap.of(ImmutableBiMap.java:72)
+at com.google.common.collect.ImmutableMap.of(ImmutableMap.java:124)
+at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:210)
 at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:130)
 at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:143)
-at com.torenzosite.qa.base.TestBase.initialization(TestBase.java:153)
+at com.torenzosite.qa.base.TestBase.initialization(TestBase.java:177)
 at com.torenzosite.qa.testcases.HomePageTest.setUp(HomePageTest.java:37)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -114,41 +114,30 @@ at org.testng.TestNG.run(TestNG.java:1017)
 at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
 at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: org.openqa.selenium.json.JsonException: Unable to determine type from: M. Last 1 characters read: M
-Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
-System info: host: 'RahulKaelsMini2', ip: '192.168.1.32', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.11.6', java.version: '1.8.0_162'
-Driver info: driver.version: RemoteWebDriver
-at org.openqa.selenium.json.JsonInput.peek(JsonInput.java:121)
-at org.openqa.selenium.json.JsonTypeCoercer.lambda$null$6(JsonTypeCoercer.java:137)
-at org.openqa.selenium.json.JsonTypeCoercer.coerce(JsonTypeCoercer.java:123)
-at org.openqa.selenium.json.Json.toType(Json.java:60)
-at org.openqa.selenium.json.Json.toType(Json.java:50)
-at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:108)
-... 36 more
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.WebDriverException -->
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
             <line>
               <![CDATA[Completed executing following method : HomePageTest.setUp]]>
             </line>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="SKIP" signature="verifyHomePageTitle()[pri:1, instance:com.torenzosite.qa.testcases.HomePageTest@4e4aea35]" name="verifyHomePageTitle" duration-ms="0" started-at="2019-02-02T12:45:15Z" description=" verify Home Page Title" finished-at="2019-02-02T12:45:15Z">
-          <exception class="org.openqa.selenium.WebDriverException">
+        <test-method status="SKIP" signature="verifyHomePageTitle()[pri:1, instance:com.torenzosite.qa.testcases.HomePageTest@2eda0940]" name="verifyHomePageTitle" duration-ms="0" started-at="2019-02-04T11:23:06Z" description=" verify Home Page Title" finished-at="2019-02-04T11:23:06Z">
+          <exception class="java.lang.NullPointerException">
             <message>
-              <![CDATA[Unable to parse remote response: Misconfigured -- Unsupported OS/browser/version/device combo: OS: 'OS X 10.9', Browser: 'safari', Version: '7.0.', Device: 'unspecified']]>
+              <![CDATA[null value in entry: desiredCapabilities=null]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.WebDriverException: Unable to parse remote response: Misconfigured -- Unsupported OS/browser/version/device combo: OS: 'OS X 10.9', Browser: 'safari', Version: '7.0.', Device: 'unspecified'
-at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:111)
-at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:73)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
-at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:212)
+              <![CDATA[java.lang.NullPointerException: null value in entry: desiredCapabilities=null
+at com.google.common.collect.CollectPreconditions.checkEntryNotNull(CollectPreconditions.java:32)
+at com.google.common.collect.SingletonImmutableBiMap.<init>(SingletonImmutableBiMap.java:42)
+at com.google.common.collect.ImmutableBiMap.of(ImmutableBiMap.java:72)
+at com.google.common.collect.ImmutableMap.of(ImmutableMap.java:124)
+at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:210)
 at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:130)
 at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:143)
-at com.torenzosite.qa.base.TestBase.initialization(TestBase.java:153)
+at com.torenzosite.qa.base.TestBase.initialization(TestBase.java:177)
 at com.torenzosite.qa.testcases.HomePageTest.setUp(HomePageTest.java:37)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -178,20 +167,9 @@ at org.testng.TestNG.run(TestNG.java:1017)
 at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
 at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: org.openqa.selenium.json.JsonException: Unable to determine type from: M. Last 1 characters read: M
-Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
-System info: host: 'RahulKaelsMini2', ip: '192.168.1.32', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.11.6', java.version: '1.8.0_162'
-Driver info: driver.version: RemoteWebDriver
-at org.openqa.selenium.json.JsonInput.peek(JsonInput.java:121)
-at org.openqa.selenium.json.JsonTypeCoercer.lambda$null$6(JsonTypeCoercer.java:137)
-at org.openqa.selenium.json.JsonTypeCoercer.coerce(JsonTypeCoercer.java:123)
-at org.openqa.selenium.json.Json.toType(Json.java:60)
-at org.openqa.selenium.json.Json.toType(Json.java:50)
-at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:108)
-... 36 more
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.WebDriverException -->
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
             <line>
               <![CDATA[(About@Test Method)Test Method resides in com.torenzosite.qa.testcases.HomePageTest]]>
@@ -207,29 +185,29 @@ at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.
             </line>
           </reporter-output>
         </test-method> <!-- verifyHomePageTitle -->
-        <test-method status="SKIP" signature="tearDown()[pri:0, instance:com.torenzosite.qa.testcases.HomePageTest@4e4aea35]" name="tearDown" is-config="true" duration-ms="0" started-at="2019-02-02T12:45:15Z" finished-at="2019-02-02T12:45:15Z">
+        <test-method status="SKIP" signature="tearDown()[pri:0, instance:com.torenzosite.qa.testcases.HomePageTest@2eda0940]" name="tearDown" is-config="true" duration-ms="0" started-at="2019-02-04T11:23:06Z" finished-at="2019-02-04T11:23:06Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="SKIP" signature="setUp()[pri:0, instance:com.torenzosite.qa.testcases.HomePageTest@4e4aea35]" name="setUp" is-config="true" duration-ms="0" started-at="2019-02-02T12:45:15Z" finished-at="2019-02-02T12:45:15Z">
+        <test-method status="SKIP" signature="setUp()[pri:0, instance:com.torenzosite.qa.testcases.HomePageTest@2eda0940]" name="setUp" is-config="true" duration-ms="0" started-at="2019-02-04T11:23:06Z" finished-at="2019-02-04T11:23:06Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="SKIP" signature="verifyEmailAddreeField()[pri:2, instance:com.torenzosite.qa.testcases.HomePageTest@4e4aea35]" name="verifyEmailAddreeField" duration-ms="0" started-at="2019-02-02T12:45:15Z" description=" verify Email Addree Field" finished-at="2019-02-02T12:45:15Z">
-          <exception class="org.openqa.selenium.WebDriverException">
+        <test-method status="SKIP" signature="verifyEmailAddreeField()[pri:2, instance:com.torenzosite.qa.testcases.HomePageTest@2eda0940]" name="verifyEmailAddreeField" duration-ms="0" started-at="2019-02-04T11:23:06Z" description=" verify Email Addree Field" finished-at="2019-02-04T11:23:06Z">
+          <exception class="java.lang.NullPointerException">
             <message>
-              <![CDATA[Unable to parse remote response: Misconfigured -- Unsupported OS/browser/version/device combo: OS: 'OS X 10.9', Browser: 'safari', Version: '7.0.', Device: 'unspecified']]>
+              <![CDATA[null value in entry: desiredCapabilities=null]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.WebDriverException: Unable to parse remote response: Misconfigured -- Unsupported OS/browser/version/device combo: OS: 'OS X 10.9', Browser: 'safari', Version: '7.0.', Device: 'unspecified'
-at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:111)
-at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:73)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
-at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:212)
+              <![CDATA[java.lang.NullPointerException: null value in entry: desiredCapabilities=null
+at com.google.common.collect.CollectPreconditions.checkEntryNotNull(CollectPreconditions.java:32)
+at com.google.common.collect.SingletonImmutableBiMap.<init>(SingletonImmutableBiMap.java:42)
+at com.google.common.collect.ImmutableBiMap.of(ImmutableBiMap.java:72)
+at com.google.common.collect.ImmutableMap.of(ImmutableMap.java:124)
+at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:210)
 at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:130)
 at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:143)
-at com.torenzosite.qa.base.TestBase.initialization(TestBase.java:153)
+at com.torenzosite.qa.base.TestBase.initialization(TestBase.java:177)
 at com.torenzosite.qa.testcases.HomePageTest.setUp(HomePageTest.java:37)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -259,20 +237,9 @@ at org.testng.TestNG.run(TestNG.java:1017)
 at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
 at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: org.openqa.selenium.json.JsonException: Unable to determine type from: M. Last 1 characters read: M
-Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
-System info: host: 'RahulKaelsMini2', ip: '192.168.1.32', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.11.6', java.version: '1.8.0_162'
-Driver info: driver.version: RemoteWebDriver
-at org.openqa.selenium.json.JsonInput.peek(JsonInput.java:121)
-at org.openqa.selenium.json.JsonTypeCoercer.lambda$null$6(JsonTypeCoercer.java:137)
-at org.openqa.selenium.json.JsonTypeCoercer.coerce(JsonTypeCoercer.java:123)
-at org.openqa.selenium.json.Json.toType(Json.java:60)
-at org.openqa.selenium.json.Json.toType(Json.java:50)
-at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:108)
-... 36 more
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.WebDriverException -->
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
             <line>
               <![CDATA[(About@Test Method)Test Method resides in com.torenzosite.qa.testcases.HomePageTest]]>
@@ -288,29 +255,29 @@ at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.
             </line>
           </reporter-output>
         </test-method> <!-- verifyEmailAddreeField -->
-        <test-method status="SKIP" signature="tearDown()[pri:0, instance:com.torenzosite.qa.testcases.HomePageTest@4e4aea35]" name="tearDown" is-config="true" duration-ms="0" started-at="2019-02-02T12:45:15Z" finished-at="2019-02-02T12:45:15Z">
+        <test-method status="SKIP" signature="tearDown()[pri:0, instance:com.torenzosite.qa.testcases.HomePageTest@2eda0940]" name="tearDown" is-config="true" duration-ms="0" started-at="2019-02-04T11:23:06Z" finished-at="2019-02-04T11:23:06Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="SKIP" signature="setUp()[pri:0, instance:com.torenzosite.qa.testcases.HomePageTest@4e4aea35]" name="setUp" is-config="true" duration-ms="0" started-at="2019-02-02T12:45:15Z" finished-at="2019-02-02T12:45:15Z">
+        <test-method status="SKIP" signature="setUp()[pri:0, instance:com.torenzosite.qa.testcases.HomePageTest@2eda0940]" name="setUp" is-config="true" duration-ms="0" started-at="2019-02-04T11:23:06Z" finished-at="2019-02-04T11:23:06Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="SKIP" signature="verifyWithEmptyEmailAddreeField()[pri:3, instance:com.torenzosite.qa.testcases.HomePageTest@4e4aea35]" name="verifyWithEmptyEmailAddreeField" duration-ms="0" started-at="2019-02-02T12:45:15Z" description=" verify Email Addree Field with email id" finished-at="2019-02-02T12:45:15Z">
-          <exception class="org.openqa.selenium.WebDriverException">
+        <test-method status="SKIP" signature="verifyWithEmptyEmailAddreeField()[pri:3, instance:com.torenzosite.qa.testcases.HomePageTest@2eda0940]" name="verifyWithEmptyEmailAddreeField" duration-ms="0" started-at="2019-02-04T11:23:06Z" description=" verify Email Addree Field with email id" finished-at="2019-02-04T11:23:06Z">
+          <exception class="java.lang.NullPointerException">
             <message>
-              <![CDATA[Unable to parse remote response: Misconfigured -- Unsupported OS/browser/version/device combo: OS: 'OS X 10.9', Browser: 'safari', Version: '7.0.', Device: 'unspecified']]>
+              <![CDATA[null value in entry: desiredCapabilities=null]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.WebDriverException: Unable to parse remote response: Misconfigured -- Unsupported OS/browser/version/device combo: OS: 'OS X 10.9', Browser: 'safari', Version: '7.0.', Device: 'unspecified'
-at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:111)
-at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:73)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
-at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:212)
+              <![CDATA[java.lang.NullPointerException: null value in entry: desiredCapabilities=null
+at com.google.common.collect.CollectPreconditions.checkEntryNotNull(CollectPreconditions.java:32)
+at com.google.common.collect.SingletonImmutableBiMap.<init>(SingletonImmutableBiMap.java:42)
+at com.google.common.collect.ImmutableBiMap.of(ImmutableBiMap.java:72)
+at com.google.common.collect.ImmutableMap.of(ImmutableMap.java:124)
+at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:210)
 at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:130)
 at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:143)
-at com.torenzosite.qa.base.TestBase.initialization(TestBase.java:153)
+at com.torenzosite.qa.base.TestBase.initialization(TestBase.java:177)
 at com.torenzosite.qa.testcases.HomePageTest.setUp(HomePageTest.java:37)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -340,20 +307,9 @@ at org.testng.TestNG.run(TestNG.java:1017)
 at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
 at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: org.openqa.selenium.json.JsonException: Unable to determine type from: M. Last 1 characters read: M
-Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
-System info: host: 'RahulKaelsMini2', ip: '192.168.1.32', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.11.6', java.version: '1.8.0_162'
-Driver info: driver.version: RemoteWebDriver
-at org.openqa.selenium.json.JsonInput.peek(JsonInput.java:121)
-at org.openqa.selenium.json.JsonTypeCoercer.lambda$null$6(JsonTypeCoercer.java:137)
-at org.openqa.selenium.json.JsonTypeCoercer.coerce(JsonTypeCoercer.java:123)
-at org.openqa.selenium.json.Json.toType(Json.java:60)
-at org.openqa.selenium.json.Json.toType(Json.java:50)
-at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:108)
-... 36 more
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.WebDriverException -->
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
             <line>
               <![CDATA[(About@Test Method)Test Method resides in com.torenzosite.qa.testcases.HomePageTest]]>
@@ -369,29 +325,29 @@ at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.
             </line>
           </reporter-output>
         </test-method> <!-- verifyWithEmptyEmailAddreeField -->
-        <test-method status="SKIP" signature="tearDown()[pri:0, instance:com.torenzosite.qa.testcases.HomePageTest@4e4aea35]" name="tearDown" is-config="true" duration-ms="0" started-at="2019-02-02T12:45:15Z" finished-at="2019-02-02T12:45:15Z">
+        <test-method status="SKIP" signature="tearDown()[pri:0, instance:com.torenzosite.qa.testcases.HomePageTest@2eda0940]" name="tearDown" is-config="true" duration-ms="0" started-at="2019-02-04T11:23:06Z" finished-at="2019-02-04T11:23:06Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="SKIP" signature="setUp()[pri:0, instance:com.torenzosite.qa.testcases.HomePageTest@4e4aea35]" name="setUp" is-config="true" duration-ms="0" started-at="2019-02-02T12:45:15Z" finished-at="2019-02-02T12:45:15Z">
+        <test-method status="SKIP" signature="setUp()[pri:0, instance:com.torenzosite.qa.testcases.HomePageTest@2eda0940]" name="setUp" is-config="true" duration-ms="0" started-at="2019-02-04T11:23:06Z" finished-at="2019-02-04T11:23:06Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="SKIP" signature="verifyWithInvalidEmailAddreeField()[pri:4, instance:com.torenzosite.qa.testcases.HomePageTest@4e4aea35]" name="verifyWithInvalidEmailAddreeField" duration-ms="0" started-at="2019-02-02T12:45:15Z" description=" verify Email Addree Field with invalidemail id" finished-at="2019-02-02T12:45:15Z">
-          <exception class="org.openqa.selenium.WebDriverException">
+        <test-method status="SKIP" signature="verifyWithInvalidEmailAddreeField()[pri:4, instance:com.torenzosite.qa.testcases.HomePageTest@2eda0940]" name="verifyWithInvalidEmailAddreeField" duration-ms="0" started-at="2019-02-04T11:23:06Z" description=" verify Email Addree Field with invalidemail id" finished-at="2019-02-04T11:23:06Z">
+          <exception class="java.lang.NullPointerException">
             <message>
-              <![CDATA[Unable to parse remote response: Misconfigured -- Unsupported OS/browser/version/device combo: OS: 'OS X 10.9', Browser: 'safari', Version: '7.0.', Device: 'unspecified']]>
+              <![CDATA[null value in entry: desiredCapabilities=null]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.WebDriverException: Unable to parse remote response: Misconfigured -- Unsupported OS/browser/version/device combo: OS: 'OS X 10.9', Browser: 'safari', Version: '7.0.', Device: 'unspecified'
-at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:111)
-at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:73)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
-at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:212)
+              <![CDATA[java.lang.NullPointerException: null value in entry: desiredCapabilities=null
+at com.google.common.collect.CollectPreconditions.checkEntryNotNull(CollectPreconditions.java:32)
+at com.google.common.collect.SingletonImmutableBiMap.<init>(SingletonImmutableBiMap.java:42)
+at com.google.common.collect.ImmutableBiMap.of(ImmutableBiMap.java:72)
+at com.google.common.collect.ImmutableMap.of(ImmutableMap.java:124)
+at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:210)
 at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:130)
 at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:143)
-at com.torenzosite.qa.base.TestBase.initialization(TestBase.java:153)
+at com.torenzosite.qa.base.TestBase.initialization(TestBase.java:177)
 at com.torenzosite.qa.testcases.HomePageTest.setUp(HomePageTest.java:37)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -421,20 +377,9 @@ at org.testng.TestNG.run(TestNG.java:1017)
 at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
 at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: org.openqa.selenium.json.JsonException: Unable to determine type from: M. Last 1 characters read: M
-Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
-System info: host: 'RahulKaelsMini2', ip: '192.168.1.32', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.11.6', java.version: '1.8.0_162'
-Driver info: driver.version: RemoteWebDriver
-at org.openqa.selenium.json.JsonInput.peek(JsonInput.java:121)
-at org.openqa.selenium.json.JsonTypeCoercer.lambda$null$6(JsonTypeCoercer.java:137)
-at org.openqa.selenium.json.JsonTypeCoercer.coerce(JsonTypeCoercer.java:123)
-at org.openqa.selenium.json.Json.toType(Json.java:60)
-at org.openqa.selenium.json.Json.toType(Json.java:50)
-at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:108)
-... 36 more
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.WebDriverException -->
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
             <line>
               <![CDATA[(About@Test Method)Test Method resides in com.torenzosite.qa.testcases.HomePageTest]]>
@@ -453,7 +398,7 @@ at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.
             </line>
           </reporter-output>
         </test-method> <!-- verifyWithInvalidEmailAddreeField -->
-        <test-method status="SKIP" signature="tearDown()[pri:0, instance:com.torenzosite.qa.testcases.HomePageTest@4e4aea35]" name="tearDown" is-config="true" duration-ms="0" started-at="2019-02-02T12:45:15Z" finished-at="2019-02-02T12:45:15Z">
+        <test-method status="SKIP" signature="tearDown()[pri:0, instance:com.torenzosite.qa.testcases.HomePageTest@2eda0940]" name="tearDown" is-config="true" duration-ms="0" started-at="2019-02-04T11:23:06Z" finished-at="2019-02-04T11:23:06Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
