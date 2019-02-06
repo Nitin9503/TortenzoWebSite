@@ -49,23 +49,10 @@ public class TryTorenzoForFreePageTest extends TestBase {
 	@BeforeMethod
 	public void setUp() throws IOException, InterruptedException{
 			
-		String broweserName = prop.getProperty("browser");
-	if (broweserName.equals("mobileChrome")){
-			
-			System.out.println("Testing WebSite on Anddroid Emulator");
 			initialization();
 			homePage = new HomePage();	
 			tryTorenzoForFreePage = new TryTorenzoForFreePage();
-			contactUsPage =new ContactUsPage(); 
-		}
-		else{
-			
-			initialization();
-			homePage = new HomePage();	
-			tryTorenzoForFreePage = new TryTorenzoForFreePage();
-			contactUsPage =new ContactUsPage(); 
-			
-		}				
+			contactUsPage =new ContactUsPage();				
 		
 	} 
 	
@@ -173,18 +160,10 @@ public class TryTorenzoForFreePageTest extends TestBase {
 	
 
 	@AfterMethod
-	public void tearDown(){
-		
-		String broweserName = prop.getProperty("browser");	
-		if (broweserName.equals("mobileChrome")){
-			
-			System.out.println("Testing WebSite on Anddroid Emulator");
-		}
-		else{
+	public void tearDown(){	
+	
 			driver.quit();
 			
-		}
-	
 	}
 	
 	

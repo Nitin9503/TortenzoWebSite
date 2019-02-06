@@ -20,6 +20,7 @@ import com.torenzosite.qa.pages.TorenzoPOSPage;
 import com.torenzosite.qa.pages.TryTorenzoForFreePage;
 
 @Listeners(com.torenzosite.qa.listener.Listener.class)
+
 public class HomePageTest extends TestBase {
 
 	HomePage homePage;
@@ -42,7 +43,7 @@ public class HomePageTest extends TestBase {
 
 	@Test(priority = 1, description = " verify Home Page Title")
 	public void verifyHomePageTitle() {
-
+	
 		System.out.println("Title==>" + homePage.validateHomePageTitle());
 		Assert.assertEquals(homePage.validateHomePageTitle(),
 				"Mobile POS Software for Businesses, Point of Sale Hardware, Retail Management Systems - Detroit, Ann Arbor, Warren | Torenzo",
@@ -77,7 +78,7 @@ public class HomePageTest extends TestBase {
 
 	}
 
-	@Test(priority = 4, description = " verify Email Addree Field with inemail id")
+	@Test(priority = 4, description = " verify Email Addree Field with invalidemail id")
 	public void verifyWithInvalidEmailAddreeField() throws IOException, InterruptedException {
 		System.out.println("Checking alert message and validation as keeping With Envalid Email Addree Field ");
 		homePage.passEmailAddress("sachini1234");
