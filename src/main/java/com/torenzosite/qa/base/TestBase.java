@@ -141,26 +141,32 @@ public class TestBase {
 
 			if (broweserName.equals("FF")) {
 
-				/*
-				 * System.setProperty("webdriver.gecko.driver",
-				 * "E:\\SeleniumWorkSpace\\torenzowebsite\\TorenzoWebSite\\FileDriver\\geckodriver.exe"
-				 * ); System.setProperty("webdriver.firefox.marionette",
-				 * "false");
-				 */
 
-				WebDriverManager.firefoxdriver().setup();
-				driver = new FirefoxDriver();
+				System.setProperty("webdriver.gecko.driver",
+						"E:\\SeleniumWorkSpace\\torenzowebsite\\TorenzoWebSite\\FileDriver\\geckodriver.exe");
+				System.setProperty("webdriver.firefox.marionette", "false");
+
+
+			//	WebDriverManager.firefoxdriver().setup();
+				//driver = new FirefoxDriver();*/
+				/*DesiredCapabilities capabilities = new DesiredCapabilities();
+
+			    capabilities = DesiredCapabilities.firefox();
+			    capabilities.setBrowserName("firefox");
+			    capabilities.setVersion("your firefox version");
+			    capabilities.setPlatform(Platform.WINDOWS);
+			    capabilities.setCapability("marionette", false);*/
+
+			    driver = new FirefoxDriver();
 			}
 
 			else if (broweserName.equalsIgnoreCase("chrome")) {
 
-				/*
-				 * System.setProperty("webdriver.chrome.driver",
-				 * "E:\\SeleniumWorkSpace\\torenzowebsite\\TorenzoWebSite\\FileDriver\\chromedriver.exe"
-				 * );
-				 */
+				System.setProperty("webdriver.chrome.driver",
+						"E:\\SeleniumWorkSpace\\torenzowebsite\\TorenzoWebSite\\FileDriver\\chromedriver.exe");
 
-				WebDriverManager.firefoxdriver().setup();
+
+			//	WebDriverManager.firefoxdriver().setup();
 				driver = new ChromeDriver();
 
 			}
