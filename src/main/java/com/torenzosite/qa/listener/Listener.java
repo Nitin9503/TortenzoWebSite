@@ -33,7 +33,7 @@ public class Listener implements ITestListener, ISuiteListener, IInvokedMethodLi
 	public void onStart(ITestContext arg0) {
 
 		Reporter.log("Before executing test method once only" + arg0.getName(), true);
-
+		
 	}
 
 	// This belongs to ITestListener and will execute, once the Test set/batch is finished
