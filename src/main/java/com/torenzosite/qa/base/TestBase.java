@@ -31,8 +31,6 @@ import org.openqa.selenium.safari.SafariDriver;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import com.torenzosite.qa.util.TestUtil;
-
-import io.appium.java_client.android.AndroidDriver;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class TestBase {
@@ -119,7 +117,7 @@ public class TestBase {
 				
 				case "firefox-win-saucelab":
 					caps = DesiredCapabilities.firefox();
-					caps.setCapability("platform", "Windows 10");
+					caps.setCapability("platform", "Windows 8.1");
 					caps.setCapability("version", "63.0");
 					caps.setCapability("extendedDebugging", true);
 					caps.setCapability("name", "Testing on Firfox 63.0");
@@ -169,7 +167,7 @@ public class TestBase {
 					caps.setCapability("browserName", "Safari");
 					caps.setCapability("name", "Testing on Safari ipad");
 					break;
-				case "52":
+		
 					
 					default :
 						System.out.println("Browser provide is not matched");				

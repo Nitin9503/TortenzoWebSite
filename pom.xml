@@ -25,11 +25,7 @@
 			<version>3.1.1</version>
 			<scope>test</scope>
 		</dependency>
-		<dependency>
-			<groupId>com.applitools</groupId>
-			<artifactId>eyes-selenium-java3</artifactId>
-			<version>[3.0.0, 4.0.0)</version>
-		</dependency>
+	
 		<!-- https://mvnrepository.com/artifact/org.w3c.css/sac -->
 		<dependency>
 			<groupId>org.w3c.css</groupId>
@@ -75,7 +71,11 @@
 			<artifactId>poi</artifactId>
 			<version>3.16-beta2</version>
 		</dependency>
-
+<dependency>
+    <groupId>xml-apis</groupId>
+    <artifactId>xml-apis</artifactId>
+    <version>1.4.01</version>
+</dependency>
 
 		<dependency>
 			<groupId>org.apache.poi</groupId>
