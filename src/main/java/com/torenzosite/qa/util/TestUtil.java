@@ -20,7 +20,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import com.gargoylesoftware.htmlunit.javascript.background.JavaScriptExecutor;
 import com.torenzosite.qa.base.TestBase;
 
-import io.appium.java_client.functions.ExpectedCondition;
 
 public class TestUtil extends TestBase {
 
@@ -36,7 +35,7 @@ public class TestUtil extends TestBase {
 	public static String screenshotName = "";
 	
 	// Static variable for Launch activety of browser
-	public static Properties prop;
+	
 	public static String driverPath;
 	public static String hubURL = "http://192.168.1.39:5568/wd/hub";	
 	public static final String USERNAME = "sachin1";

@@ -1,15 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
-  <test thread-count="5" name="Default test(failed)">
+<suite thread-count="3" guice-stage="DEVELOPMENT" name="Failed suite [Torenzo WebSite]">
+  <listeners>
+    <listener class-name="com.torenzosite.qa.extentreprot.ExtentReportListener"/>
+  </listeners>
+  <test thread-count="3" name="TorenzoTest(failed)">
     <classes>
-      <class name="com.torenzosite.qa.testcases.BrokenImageAndLinks">
+      <class name="com.torenzosite.qa.testcases.FeaturePageTest">
         <methods>
-          <include name="findBrokenLinkOnTorenzoMainPage"/>
-          <include name="setUp"/>
           <include name="tearDown"/>
+          <include name="closeToForm"/>
+          <include name="setUp"/>
         </methods>
-      </class> <!-- com.torenzosite.qa.testcases.BrokenImageAndLinks -->
+      </class> <!-- com.torenzosite.qa.testcases.FeaturePageTest -->
+      <class name="com.torenzosite.qa.testcases.TryTorenzoForFreePageTest">
+        <methods>
+          <include name="clickOnTryTorenzoForFreeAndFillForm"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.torenzosite.qa.testcases.TryTorenzoForFreePageTest -->
+      <class name="com.torenzosite.qa.testcases.LeaveUsPageTest">
+        <methods>
+          <include name="verifyLeaveUsPageTitle"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.torenzosite.qa.testcases.LeaveUsPageTest -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- TorenzoTest(failed) -->
+</suite> <!-- Failed suite [Torenzo WebSite] -->

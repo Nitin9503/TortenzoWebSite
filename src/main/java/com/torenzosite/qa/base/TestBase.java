@@ -31,7 +31,10 @@ import org.openqa.selenium.safari.SafariDriver;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import com.torenzosite.qa.util.TestUtil;
+
+import io.github.bonigarcia.wdm.ChromeDriverManager;
 import io.github.bonigarcia.wdm.WebDriverManager;
+
 
 public class TestBase {
 	// public static String hubURL1 = "http://192.168.1.32:5566/wd/hub";
@@ -79,8 +82,8 @@ public class TestBase {
 					driver = new FirefoxDriver(option);
 				} else {	
 					System.out.println("Execution on Normal FF Browser");
-					  /*System.setProperty("webdriver.gecko.driver", "/usr/local/bin/geckodriver");
-					  System.setProperty("webdriver.firefox.marionette", "false");*/				
+					 // System.setProperty("webdriver.gecko.driver", "/usr/local/bin/geckodriver");
+					//  System.setProperty("webdriver.firefox.marionette", "false");			
 					WebDriverManager.firefoxdriver().setup();
 					driver = new FirefoxDriver();					
 				}
@@ -96,6 +99,7 @@ public class TestBase {
 				} else {
 					System.out.println("Execution on Normal FF Browser");
 					WebDriverManager.chromedriver().setup();
+					//ChromeDriverManager.getInstance(CHROME).setup();
 					driver = new ChromeDriver();           
 				}
 			} else if (broweserName.equalsIgnoreCase("safari")) {

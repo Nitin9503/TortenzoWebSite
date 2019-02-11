@@ -8,68 +8,25 @@
     <classes>
       <class name="com.torenzosite.qa.testcases.FeaturePageTest">
         <methods>
-          <include name="fillFormWithIncorrectEmailId"/>
-          <include name="fillFormWithEmptyEmaildId"/>
-          <include name="fillFormWithEmptyData"/>
           <include name="tearDown"/>
-          <include name="fillFormFromFeaturePage"/>
           <include name="closeToForm"/>
-          <include name="verifyHomePageTitle"/>
-          <include name="verifyFeaturesPageTitle"/>
           <include name="setUp"/>
-          <include name="fillFormWithEmptyBussinesName"/>
-          <include name="fillFormWithEmptyPhoneNumber"/>
-          <include name="verifyTryTorenzoForFree"/>
         </methods>
       </class> <!-- com.torenzosite.qa.testcases.FeaturePageTest -->
-      <class name="com.torenzosite.qa.testcases.ContactUsPageTest">
-        <methods>
-          <include name="setUp"/>
-          <include name="fillFormToConatctUsWithIncorrectEmail"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- com.torenzosite.qa.testcases.ContactUsPageTest -->
-      <class name="com.torenzosite.qa.testcases.LeaveUsPageTest">
-        <methods>
-          <include name="verifyLeaveUsPageTitle"/>
-          <include name="tearDown"/>
-          <include name="verifyHomePageTitle"/>
-          <include name="setUp"/>
-        </methods>
-      </class> <!-- com.torenzosite.qa.testcases.LeaveUsPageTest -->
-      <class name="com.torenzosite.qa.testcases.PricingPageTest">
-        <methods>
-          <include name="tearDown"/>
-          <include name="verifyPricingPageTitle"/>
-          <include name="setUp"/>
-          <include name="verifyHomePageTitle"/>
-        </methods>
-      </class> <!-- com.torenzosite.qa.testcases.PricingPageTest -->
       <class name="com.torenzosite.qa.testcases.TryTorenzoForFreePageTest">
         <methods>
           <include name="clickOnTryTorenzoForFreeAndFillForm"/>
           <include name="tearDown"/>
-          <include name="verifyHomePageTitle"/>
           <include name="setUp"/>
         </methods>
       </class> <!-- com.torenzosite.qa.testcases.TryTorenzoForFreePageTest -->
-      <class name="com.torenzosite.qa.testcases.TorenzoPOSPageTest">
+      <class name="com.torenzosite.qa.testcases.LeaveUsPageTest">
         <methods>
-          <include name="verifyTextFromTorenzoPOSPage"/>
-          <include name="verifyHomePageTitle"/>
+          <include name="verifyLeaveUsPageTitle"/>
           <include name="tearDown"/>
           <include name="setUp"/>
         </methods>
-      </class> <!-- com.torenzosite.qa.testcases.TorenzoPOSPageTest -->
-      <class name="com.torenzosite.qa.testcases.HardwarePageTest">
-        <methods>
-          <include name="verifyHardwarePageTitle"/>
-          <include name="setUp"/>
-          <include name="verifyContactUsPage"/>
-          <include name="tearDown"/>
-          <include name="verifyHomePageTitle"/>
-        </methods>
-      </class> <!-- com.torenzosite.qa.testcases.HardwarePageTest -->
+      </class> <!-- com.torenzosite.qa.testcases.LeaveUsPageTest -->
     </classes>
   </test> <!-- TorenzoTest(failed) -->
 </suite> <!-- Failed suite [Torenzo WebSite] -->
