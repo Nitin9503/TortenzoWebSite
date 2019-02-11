@@ -38,6 +38,7 @@ public class TestBase {
 	//Logger log = Logger.getLogger(TestBase.class) ;	
 	public static WebDriver driver;
 	public static DesiredCapabilities caps;
+	public static Properties prop;
 	//E:\SeleniumWorkSpace\torenzowebsite\TorenzoWebSite\FileDriver\chromedriver.exe
 	public TestBase() throws IOException, InterruptedException {
 		 driverPath = System.getProperty("user.dir");
