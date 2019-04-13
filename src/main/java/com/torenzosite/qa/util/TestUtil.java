@@ -13,29 +13,26 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.gargoylesoftware.htmlunit.javascript.background.JavaScriptExecutor;
 import com.torenzosite.qa.base.TestBase;
-
-
 public class TestUtil extends TestBase {
 
 	public TestUtil() throws IOException, InterruptedException {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-
 	public static long PAGE_LOAD_TIMEOUT = 120;
 	public static long IMPLICIT_WAIT = 120;
 	public static String title = "";
 	public static String OSName = "";
 	public static String screenshotName = "";
 	
-	// Static variable for Launch activety of browser
-	
+	// Static variable for Launch activety of browser	
 	public static String driverPath;
 	public static String hubURL = "http://192.168.1.39:5568/wd/hub";	
 	public static final String USERNAME = "sachin1";
@@ -54,21 +51,11 @@ public class TestUtil extends TestBase {
 		js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
 
 	}
-
+	
 	public static void scrollUpHorizontalORVIsibilityOFElement(WebElement element) {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].scrollIntoView();", element);
 
-	}
-
-	public static void clickOn(WebElement element, int timeouts) {
-
-		new WebDriverWait(driver, timeouts)
-				.until(ExpectedConditions.elementToBeClickable(element));
-		element.click();
-
-		/*WebDriverWait wait = new WebDriverWait(driver, 10);
-		wait.until(ExpectedConditions.elementToBeClickable(eleke));option for the same*/ 
 	}
 
 	public static void flashOnElement(WebElement element) {
@@ -95,6 +82,10 @@ public class TestUtil extends TestBase {
 		Select sel = new Select(element);
 		sel.selectByIndex(value);
 	}
+	public static void selectValuefromDropDown(WebElement element, String text) {
+		Select sel = new Select(element);
+		sel.selectByVisibleText(text);
+	}
 
 	public static boolean isElementDisplayed(WebElement element) {
 		return element.isDisplayed();
@@ -114,16 +105,5 @@ public class TestUtil extends TestBase {
 		element.click();
 	}
 
-	public static void waitForElementforClick(WebElement element, int maxTimeout) {
-		WebDriverWait wait = new WebDriverWait(driver, maxTimeout);
-		wait.until(ExpectedConditions.elementToBeClickable(element));
-		element.click();
-	}
-
-	public static void waitForElementforType(WebElement element, int maxTimeout, String value) {
-		WebDriverWait wait = new WebDriverWait(driver, maxTimeout);
-		wait.until(ExpectedConditions.elementToBeClickable(element));
-		element.sendKeys(value);
-	}
-
+	
 }

@@ -28,16 +28,18 @@ import org.openqa.selenium.logging.LogEntries;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.safari.SafariDriver;
+import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
+import org.testng.annotations.Test;
+
 import com.torenzosite.qa.util.TestUtil;
 
 import io.github.bonigarcia.wdm.ChromeDriverManager;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-
 public class TestBase {
-	// public static String hubURL1 = "http://192.168.1.32:5566/wd/hub";
+	/// public static String hubURL1 = "http://192.168.1.32:5566/wd/hub";
 	//Logger log = Logger.getLogger(TestBase.class) ;	
 	public static WebDriver driver;
 	public static DesiredCapabilities caps;
@@ -273,5 +275,4 @@ public class TestBase {
 		// driver.get(prop.getProperty("url1"));
 		// driver.get("https://www.ixigo.com/trains");
 	}
-
 }

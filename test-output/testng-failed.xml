@@ -1,32 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite thread-count="3" guice-stage="DEVELOPMENT" name="Failed suite [Torenzo WebSite]">
-  <listeners>
-    <listener class-name="com.torenzosite.qa.extentreprot.ExtentReportListener"/>
-  </listeners>
-  <test thread-count="3" name="TorenzoTest(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.torenzosite.qa.testcases.FeaturePageTest">
+      <class name="practice.RubiqueCC">
         <methods>
-          <include name="tearDown"/>
-          <include name="closeToForm"/>
+          <include name="testMethod"/>
           <include name="setUp"/>
         </methods>
-      </class> <!-- com.torenzosite.qa.testcases.FeaturePageTest -->
-      <class name="com.torenzosite.qa.testcases.TryTorenzoForFreePageTest">
-        <methods>
-          <include name="clickOnTryTorenzoForFreeAndFillForm"/>
-          <include name="tearDown"/>
-          <include name="setUp"/>
-        </methods>
-      </class> <!-- com.torenzosite.qa.testcases.TryTorenzoForFreePageTest -->
-      <class name="com.torenzosite.qa.testcases.LeaveUsPageTest">
-        <methods>
-          <include name="verifyLeaveUsPageTitle"/>
-          <include name="tearDown"/>
-          <include name="setUp"/>
-        </methods>
-      </class> <!-- com.torenzosite.qa.testcases.LeaveUsPageTest -->
+      </class> <!-- practice.RubiqueCC -->
     </classes>
-  </test> <!-- TorenzoTest(failed) -->
-</suite> <!-- Failed suite [Torenzo WebSite] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

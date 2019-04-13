@@ -13,6 +13,8 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 
 import com.torenzosite.qa.util.TestUtil;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
 public class TestBase {
 	
 	public static WebDriver driver ;
@@ -22,7 +24,7 @@ public class TestBase {
 		
 		try {
 			prop = new Properties();
-			FileInputStream ip = new FileInputStream("E:\\SeleniumWorkSpace\\torenzowebsite\\TorenzoWebSite\\src\\main\\java\\practice\\config.properties");
+			FileInputStream ip = new FileInputStream("/Users/rahul.kardel/Documents/TorenzoWebSite/src/main/java/practice/config.properties");
 			prop.load(ip);
 			
 		} catch (FileNotFoundException e) {
@@ -45,8 +47,8 @@ public class TestBase {
 		}
 		else if (broweserName.equals("chrome")){
 
-			System.setProperty("webdriver.chrome.driver", "E:\\SeleniumWorkSpace\\torenzowebsite\\TorenzoWebSite\\FileDriver\\chromedriver.exe");		
-			
+		//	System.setProperty("webdriver.chrome.driver", "/Users/rahul.kardel/Documents/TorenzoWebSite/FileDriver/chromedriver.exe");		
+		WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver();
 
 		}	
