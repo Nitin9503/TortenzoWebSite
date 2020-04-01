@@ -46,7 +46,6 @@ public class BrokenImageAndLinks extends TestBase{
 
 	List<WebElement>linksList=driver.findElements(By.tagName("a"));
 	linksList.addAll(driver.findElements(By.tagName("img")));
-	System.out.println("hello");
 	
 	List<WebElement>activeLinks = new ArrayList<WebElement>();
 	
