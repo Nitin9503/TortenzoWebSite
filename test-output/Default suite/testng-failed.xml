@@ -3,12 +3,12 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="practice.RubiqueCC">
+      <class name="com.torenzosite.qa.testcases.BrokenLinksOnTorenzoPageTest">
         <methods>
-          <include name="testMethod"/>
           <include name="setUp"/>
+          <include name="verifyHomePageTitle"/>
         </methods>
-      </class> <!-- practice.RubiqueCC -->
+      </class> <!-- com.torenzosite.qa.testcases.BrokenLinksOnTorenzoPageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

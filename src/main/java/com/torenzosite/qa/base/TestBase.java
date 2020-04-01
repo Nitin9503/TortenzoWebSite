@@ -60,9 +60,9 @@ public class TestBase {
 			System.out.println(OSName);
 			prop = new Properties();
 			System.out.println(OSName);
-			FileInputStream fis = new FileInputStream(driverPath+"\\src\\main\\java\\com\\torenzosite\\qa\\config\\config.properties");
+			FileInputStream fis = new FileInputStream(driverPath+"/src/main/java/com/torenzosite/qa/config/config.properties");
 			prop.load(fis);
-			System.out.println(OSName);
+			System.out.println("prop"+OSName);
 		}
 	}
 
